@@ -75,92 +75,166 @@
                             <span class="m-auto">en</span>
                         </div>
                     </div>
-                    <div class="row pt-4">
-                        <div class="col-1"></div>
-                        <div class="col-8">
+                    <div class="content-body">
+                        <div class="d-block">
+                            <div class="row pt-4">
+                                <div class="col-1"></div>
+                                <div class="col-8">
+                                    <div class="row">
+                                        <div class="col-3 m-2 p-2 d-flex justify-content-left">PROFILES</div>
+                                        <div class="col-4 m-2 p-2 d-flex justify-content-left">RECOMMENDED PROFILES</div>
+                                    </div>
+                                </div>
+                                <div class="col-3">
+                                    <div class="m-2 p-2 d-flex justify-content-left">3 / 4 Profiles Active</div>
+                                </div>
+                            </div>
+        
+                            <div class="row mt-2">
+                                <div class="col-1"></div>
+        
+                                <div class="col-10 d-flex">
+                                    <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;" onClick="showChangeStatusPopup()">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                        <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                    </div>
+            
+                                    <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                        <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                    </div>
+            
+                                    <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                        <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                    </div>
+            
+                                    <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                        <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-1"></div>
+                            </div>
+        
+                            <div class="row mt-2">
+                                <div class="col-1"></div>
+        
+                                <div class="col-10 d-flex">
+                                    <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                        <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                    </div>
+            
+                                    <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                        <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                    </div>
+            
+                                    <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                        <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                    </div>
+            
+                                    <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                        <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                    </div>
+                                </div>
+        
+                                <div class="col-1"></div>
+                            </div>
+        
                             <div class="row">
-                                <div class="col-3 m-2 p-2 d-flex justify-content-left">PROFILES</div>
-                                <div class="col-4 m-2 p-2 d-flex justify-content-left">RECOMMENDED PROFILES</div>
+                                <div style="height: 40px;"></div>
                             </div>
                         </div>
-                        <div class="col-3">
-                            <div class="m-2 p-2 d-flex justify-content-left">3 / 4 Profiles Active</div>
-                        </div>
-                    </div>
-
-                    <div class="row mt-2">
-                        <div class="col-1"></div>
-
-                        <div class="col-10 d-flex">
-                            <div class="w-25 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
-                                <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
-                                <span class="d-block status-size p-border-bot">ACTIVE</span>
-                            </div>
+                        
+                        <div class="popup-container d-flex" id="statusPopUp">
+                            <div class="d-flex popup-bg">  </div>
+                            <div class="popup stack-top p-4 text-center">
+                                <h3>Trading-News</h3>
+                                <span>Do you want to activate this profile now?</span>
     
-                            <div class="w-25 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
-                                <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
-                                <span class="d-block status-size p-border-bot">ACTIVE</span>
-                            </div>
-    
-                            <div class="w-25 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
-                                <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
-                                <span class="d-block status-size p-border-bot">ACTIVE</span>
-                            </div>
-    
-                            <div class="w-25 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
-                                <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
-                                <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                <div class="d-flex justify-content-center mt-3">
+                                    <button class="yes-btn px-4 py-1 me-3" onclick="hideChangeStatusPopup()">YES</button>
+                                    <button class="no-btn px-4 py-1" onclick="hideChangeStatusPopup()">NO</button>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="col-1"></div>
-                    </div>
-
-                    <div class="row mt-2">
-                        <div class="col-1"></div>
-
-                        <div class="col-10 d-flex">
-                            <div class="w-25 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
-                                <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
-                                <span class="d-block status-size p-border-bot">ACTIVE</span>
-                            </div>
-    
-                            <div class="w-25 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
-                                <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
-                                <span class="d-block status-size p-border-bot">ACTIVE</span>
-                            </div>
-    
-                            <div class="w-25 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
-                                <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
-                                <span class="d-block status-size p-border-bot">ACTIVE</span>
-                            </div>
-    
-                            <div class="w-25 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
-                                <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
-                                <span class="d-block status-size p-border-bot">ACTIVE</span>
-                            </div>
-                        </div>
-
-                        <div class="col-1"></div>
-                    </div>
-
-                    <div class="row">
-                        <div style="height: 40px;"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    
+<script>
+    let popup = document.getElementById("statusPopUp");
+    
+    function showChangeStatusPopup() {
+        console.log("hahaha")
+        popup.classList.add("open-popup");
+    }
+    function hideChangeStatusPopup() {
+        console.log("hehehe")
+        popup.classList.remove("open-popup");
+    }
+</script>
 </body>
 <style>
+.yes-btn {
+    background: #11FFC6;
+}
+.no-btn {
+    background: #EA2A4C;
+}
+.stack-top { z-index: 9;}
+.content-body { position: relative; }
+
+.open-popup {
+    visibility: visible !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+}
+
+.popup-bg {
+    opacity: 0.6;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: black;
+}
+
+.popup {
+    border: 2px solid #7E7E7E;
+    border-radius: 16px;
+    margin: auto;
+    background-color: #333333;
+    color: #FFFFFF;
+    height: auto;
+    max-width: 250px;
+}
+.popup-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: transform 0.4s, top 0.4s;
+}
+
 .title-size { font-size: 12px;}
 .value-size { font-size: 40px; }
 .rate-size { font-size: 16px; }
