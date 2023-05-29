@@ -40,7 +40,7 @@
                         <span class="side-menu-divider mt-2"></span>
 
                         <div class="p-3 d-flex">
-                            <span class="d-block mx-auto">ACCOUNT SETTINGS</span>
+                            <span class="d-block mx-auto text-center">ACCOUNT SETTINGS</span>
                         </div>
                     </div>
                 </div>
@@ -95,25 +95,25 @@
         
                                 <div class="col-10 d-flex">
                                     <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;" onClick="showChangeStatusPopup()">
-                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="User">
                                         <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
                                         <span class="d-block status-size p-border-bot">ACTIVE</span>
                                     </div>
             
                                     <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="User">
                                         <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
                                         <span class="d-block status-size p-border-bot">ACTIVE</span>
                                     </div>
             
                                     <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="User">
                                         <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
                                         <span class="d-block status-size p-border-bot">ACTIVE</span>
                                     </div>
             
                                     <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="User">
                                         <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
                                         <span class="d-block status-size p-border-bot">ACTIVE</span>
                                     </div>
@@ -127,25 +127,25 @@
         
                                 <div class="col-10 d-flex">
                                     <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="User">
                                         <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
                                         <span class="d-block status-size p-border-bot">ACTIVE</span>
                                     </div>
             
                                     <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="User">
                                         <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
                                         <span class="d-block status-size p-border-bot">ACTIVE</span>
                                     </div>
             
                                     <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="User">
                                         <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
                                         <span class="d-block status-size p-border-bot">ACTIVE</span>
                                     </div>
             
                                     <div class="w-25 py-4 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="Notification">
+                                        <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png" alt="User">
                                         <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
                                         <span class="d-block status-size p-border-bot">ACTIVE</span>
                                     </div>
@@ -161,13 +161,18 @@
                         
                         <div class="popup-container d-flex" id="statusPopUp">
                             <div class="d-flex popup-bg">  </div>
-                            <div class="popup stack-top p-4 text-center">
-                                <h3>Trading-News</h3>
-                                <span>Do you want to activate this profile now?</span>
-    
-                                <div class="d-flex justify-content-center mt-3">
-                                    <button class="yes-btn px-4 py-1 me-3" onclick="hideChangeStatusPopup()">YES</button>
-                                    <button class="no-btn px-4 py-1" onclick="hideChangeStatusPopup()">NO</button>
+                            <div class="popup stack-top p-2 text-center">
+                                <div class="d-flex">
+                                    <img class="ms-auto h-40 w-40 popup-icon-close" src="../resources/popup-close.png" alt="close" onClick="hideChangeStatusPopup()">
+                                </div>
+                                <div class="p-2">
+                                    <h3>Trading-News</h3>
+                                    <span>Do you want to activate this profile now?</span>
+        
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <button class="yes-btn px-4 py-1 me-3" onclick="hideChangeStatusPopup()">YES</button>
+                                        <button class="no-btn px-4 py-1" onclick="hideChangeStatusPopup()">NO</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -181,11 +186,9 @@
     let popup = document.getElementById("statusPopUp");
     
     function showChangeStatusPopup() {
-        console.log("hahaha")
         popup.classList.add("open-popup");
     }
     function hideChangeStatusPopup() {
-        console.log("hehehe")
         popup.classList.remove("open-popup");
     }
 </script>
@@ -199,6 +202,11 @@
 }
 .stack-top { z-index: 9;}
 .content-body { position: relative; }
+
+.popup-icon-close {
+    height: 28px;
+    width: 28px;
+}
 
 .open-popup {
     visibility: visible !important;
