@@ -5,8 +5,267 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="body-bg d-flex">
+        <div class="container py-4 body-container">
+            <div class="row">
+                <div class="col-1 col-md-2 border-right">
+                    <div class="p-3 d-flex">
+                        <img class="m-auto h-100 w-100" src="../resources/icon.png" alt="Logo">
+                    </div>
+                    <div class="mt-4">
+                        <div class="p-3 d-flex">
+                            <span class="d-block mx-auto">DASHBOARD</span>
+                        </div>
+                        <span class="side-menu-divider mt-2"></span>
+
+                        <div class="p-3 d-flex">
+                            <span class="d-block mx-auto">PROFILES</span>
+                        </div>
+                        <span class="side-menu-divider mt-2"></span>
+
+                        <div class="p-3 d-flex">
+                            <span class="d-block mx-auto text-center">CREATE NEW PROFILE</span>
+                        </div>
+                        <span class="side-menu-divider mt-2"></span>
+
+                        <div class="p-3 d-flex">
+                            <span class="d-block mx-auto text-center">RECOMMENDED PROFILES</span>
+                        </div>
+                        <span class="side-menu-divider mt-2"></span>
+
+                        <div class="p-3 d-flex">
+                            <span class="d-block mx-auto text-center">ACCOUNT SETTINGS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-11 col-md-10 border-top">
+                    <div class="row">
+                        <div class="p-3 col-md-4 row-active-border d-flex">
+                            <span class="my-auto header-size">Hey Igor!</span>
+                        </div>
+                        <div class="p-3 col-md-6 row-active-border d-flex"> 
+                            <div class="input-group m-auto">
+                                <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                  <button class="btn btn-outline-secondary" type="button">Button</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 col-md-1 row-active-border d-flex">
+                            <span class="m-auto"><img class="icon" src="../resources/notification.png" alt="Notification"></span>
+                        </div>
+                        <div class="p-3 col-md-1 border-bottom d-flex">
+                            <span class="m-auto"><img class="icon" src="../resources/notification.png" alt="Notification"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="p-3 col-md-4  row-active-border">
+                            <span class="header-size">May 28, 2023 | Friday</span>
+                        </div>
+                        <div class="p-2 col-md-6 row-active-border"></div>
+                        <div class="p-2 col-md-1 row-active-border"></div>
+                        <div class="p-2 col-md-1 border-bottom d-flex">
+                            <span class="m-auto">en</span>
+                        </div>
+                    </div>
+                    <div class="content-body">
+                        <div class="row">
+                            <div class="col-4 d-flex">
+                                <div class="m-auto mt-5">
+                                    <img class="m-auto" src="../resources/profile-placeholder.png" alt="Profile placeholder">
+                                    <div class="mt-4">
+                                        <span class="d-block detail-size">IGOR KRYSIK</span>
+                                        <span class="d-block detail-size">igorkrysik@gmail.com</span>
+                                        <span class="d-block detail-size">+43 123456 78</span>
+                                    </div>
+
+                                    <div class="mt-5">
+                                        <span class="d-block" style="color: #616EEC;">Change name</span>
+                                        <span class="d-block" style="color: #616EEC;">Change email</span>
+                                        <span class="d-block" style="color: #616EEC;">Change password</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="row mt-5">
+                                    <div class="col-4 ps-0">
+                                        <div class="active-border py-2 px-3 row1-size text-center" style="border-radius: 16px;">
+                                            <span>ACCOUNT LIST</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-1"></div>
+                                    <div class="col-4">
+                                        <div class="active-border py-2 px-3 row1-size text-center" style="border-radius: 16px;">
+                                            <span>CREATE NEW ACCOUNT</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-5">
+                                    <div class="active-border py-3 px-4" style="border-radius: 16px;">
+
+                                        <span class="d-block">License type: 10 000$</span>
+                                        <span class="d-block">Product Key: TEM8S2-2ET83-CGKP1-DPSI2-EPZO1</span>
+                                            
+                                        <div class="row mt-4">
+                                            <div class="col-4">
+                                                <span class="d-block">Expiry date:</span>
+                                                <span class="d-block">01.01.2024</span>
+                                            </div>
+                                            <div class="col-4">
+                                                <span class="d-block">Linked to:</span>
+                                                <span class="d-block">Angela</span>
+                                            </div>
+
+                                            <div class="col-4 active-border py-2 px-4 text-center d-flex" style="border-radius: 16px;">
+                                                <span class="m-auto">UNBIND</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-5">
+                                    <div class="active-border py-3 px-4" style="border-radius: 16px;">
+
+                                        <span class="d-block" style="color: #616EEC;">PURCHASE HISTORY</span>
+                                            
+                                        <div class="row mt-4 text-left">
+                                            <div class="col-3">
+                                                <span class="d-block">Date:</span>
+                                                <span class="d-block">03.30.2023</span>
+                                            </div>
+                                            <div class="col-3">
+                                                <span class="d-block">Invoice #:</span>
+                                                <span class="d-block">IK03302023</span>
+                                            </div>
+
+                                            <div class="col-3">
+                                                <span class="d-block">Total:</span>
+                                                <span class="d-block">$100</span>
+                                            </div>
+
+                                            <div class="col-3 d-flex">
+                                                <span class="mt-auto me-auto" style="color: #616EEC;">DONWLOAD</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-5">
+                                    <div class="col-4 d-flex">
+                                        <span class="my-auto">Payment Method</span>
+                                    </div>
+                                    <div class="col-4">
+                                        <img class="m-auto" src="../resources/paypal-icon.png" alt="Paypal">
+                                    </div>
+                                    <div class="col-4">
+                                        <img class="m-auto" src="../resources/visa-icon.png" alt="Visa">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+
+</script>
 </body>
+<style>
+.row1-size { font-size: 14px; }
+.detail-size { font-size: 20px; }
+.content-body { position: relative; }
+
+.title-size { font-size: 12px;}
+.value-size { font-size: 40px; }
+.rate-size { font-size: 16px; }
+.status-size { font-size: 16px; }
+
+.header-size { font-size: 20px; }
+.side-menu-active-border {
+    border-top: 0px;
+    border-right: 1px;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-style: solid;
+    border-color: #7E7E7E;
+}
+
+.icon {
+    height: 24px;
+    width: 24px;
+}
+
+.border-top { border-top: 1px solid #7E7E7E !important; }
+.border-right { border-right: 1px solid #7E7E7E !important; }
+.border-bottom { border-bottom: 1px solid #7E7E7E !important; }
+
+.border-x {
+    border-top: 1px;
+    border-right: 0px;
+    border-bottom: 1px;
+    border-left: 0px;
+    border-style: solid;
+    border-color: #7E7E7E;
+}
+
+.row-active-border {
+    border-top: 0px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-left: 0px;
+    border-style: solid;
+    border-color: #7E7E7E;
+}
+
+.active-border {
+    border-top: 1px;
+    border-right: 1px;
+    border-bottom: 1px;
+    border-left: 1px;
+    border-style: solid;
+    border-color: #7E7E7E;
+    border-radius: 3px;
+}
+
+.p-border-bot { margin-bottom: 0px !important; }
+.body-container { margin: 40px auto auto auto }
+
+.body-bg {
+    color: #FFFFFF;
+    background-color: #0F0F0F;
+    width: 100%;
+    height: 100vh;
+}
+
+.side-menu-divider {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    height: 1px;
+    background-color: #7E7E7E;
+}
+.side-menu {
+    background-color: blue;
+    height: 100%;
+    width: 10%;
+}
+
+.main-body {
+    background-color: green;
+    height: 100%;
+    width: auto;
+}
+
+body { font-family: 'Rajdhani', sans-serif; }
+</style>
 </html>
