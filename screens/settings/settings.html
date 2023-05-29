@@ -124,7 +124,7 @@
                                                 <span class="d-block">Angela</span>
                                             </div>
 
-                                            <div class="col-4 active-border py-2 px-4 text-center d-flex" style="border-radius: 16px;">
+                                            <div class="col-4 active-border py-2 px-4 text-center d-flex" style="border-radius: 16px;" onClick="showChangeStatusPopup()">
                                                 <span class="m-auto">UNBIND</span>
                                             </div>
                                         </div>
@@ -171,19 +171,91 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="popup-container d-flex" id="statusPopUp">
+                            <div class="d-flex popup-bg">  </div>
+                            <div class="popup stack-top p-2 text-center">
+                                <div class="d-flex">
+                                    <img class="ms-auto h-40 w-40 popup-icon-close" src="../resources/popup-close.png" alt="close" onClick="hideChangeStatusPopup()">
+                                </div>
+                                <div class="p-2">
+                                    <span>Do you really want to unbind the license (this will close the program)?</span>
+        
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <button class="yes-btn px-4 py-1 me-3" onclick="hideChangeStatusPopup()">YES</button>
+                                        <button class="no-btn px-4 py-1" onclick="hideChangeStatusPopup()">NO</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 <script>
-
+    let popup = document.getElementById("statusPopUp");
+    
+    function showChangeStatusPopup() {
+        popup.classList.add("open-popup");
+    }
+    function hideChangeStatusPopup() {
+        popup.classList.remove("open-popup");
+    }
 </script>
 </body>
 <style>
+.yes-btn {
+    background: #11FFC6;
+}
+.no-btn {
+    background: #EA2A4C;
+}
+.stack-top { z-index: 9;}
+.content-body { position: relative; }
+
+.popup-icon-close {
+    height: 28px;
+    width: 28px;
+}
+
+.open-popup {
+    visibility: visible !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+}
+
+.popup-bg {
+    opacity: 0.6;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: black;
+}
+
+.popup {
+    border: 2px solid #7E7E7E;
+    border-radius: 16px;
+    margin: auto;
+    background-color: #333333;
+    color: #FFFFFF;
+    height: auto;
+    max-width: 250px;
+}
+.popup-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 0;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: transform 0.4s, top 0.4s;
+}
+
 .row1-size { font-size: 14px; }
 .detail-size { font-size: 20px; }
-.content-body { position: relative; }
 
 .title-size { font-size: 12px;}
 .value-size { font-size: 40px; }
