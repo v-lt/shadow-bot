@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .sidebar-tab.active {
+            font-weight: bold;
+            color: #11FFC6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
 </head>
+
 <body>
     <div class="body-bg d-flex">
         <div class="container py-4 body-container">
@@ -20,27 +39,30 @@
                     </div>
                     <div class="mt-4">
                         <div class="p-3 d-flex">
-                            <span class="d-block mx-auto">DASHBOARD</span>
+                            <a href="#" class="d-block mx-auto sidebar-tab active"
+                                onclick="showContent('dashboard-content')">DASHBOARD</a>
                         </div>
                         <span class="side-menu-divider mt-2"></span>
 
                         <div class="p-3 d-flex">
-                            <span class="d-block mx-auto">PROFILES</span>
+                            <a href="#" class="d-block mx-auto sidebar-tab"
+                                onclick="showContent('profile-content')">PROFILES</a>
                         </div>
                         <span class="side-menu-divider mt-2"></span>
 
                         <div class="p-3 d-flex">
-                            <span class="d-block mx-auto text-center">CREATE NEW PROFILE</span>
+                            <a href="#" class="d-block mx-auto text-center sidebar-tab">CREATE NEW PROFILE</a>
                         </div>
                         <span class="side-menu-divider mt-2"></span>
 
                         <div class="p-3 d-flex">
-                            <span class="d-block mx-auto text-center">RECOMMENDED PROFILES</span>
+                            <a href="#" class="d-block mx-auto text-center sidebar-tab">RECOMMENDED PROFILES</a>
                         </div>
                         <span class="side-menu-divider mt-2"></span>
 
                         <div class="p-3 d-flex">
-                            <span class="d-block mx-auto text-center">ACCOUNT SETTINGS</span>
+                            <a href="#" class="d-block mx-auto text-center sidebar-tab"
+                                onclick="showContent('settings-content')">ACCOUNT SETTINGS</a>
                         </div>
                     </div>
                 </div>
@@ -49,22 +71,25 @@
                         <div class="p-3 col-md-4 row-active-border d-flex">
                             <span class="my-auto header-size">Hey Igor!</span>
                         </div>
-                        <div class="p-3 col-md-6 row-active-border d-flex"> 
+                        <div class="p-3 col-md-6 row-active-border d-flex">
                             <div class="input-group m-auto">
-                                <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <input type="text" class="form-control" placeholder="Search"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
-                                  <button class="btn btn-outline-secondary" type="button">Button</button>
+                                    <button class="btn btn-outline-secondary" type="button">Button</button>
                                 </div>
                             </div>
                         </div>
                         <div class="p-3 col-md-1 row-active-border d-flex">
-                            <span class="m-auto"><img class="icon" src="../resources/notification.png" alt="Notification"></span>
+                            <span class="m-auto"><img class="icon" src="../resources/notification.png"
+                                    alt="Notification"></span>
                         </div>
                         <div class="p-3 col-md-1 border-bottom d-flex">
-                            <span class="m-auto"><img class="icon" src="../resources/notification.png" alt="Notification"></span>
+                            <span class="m-auto"><img class="icon" src="../resources/notification.png"
+                                    alt="Notification"></span>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="p-3 col-md-4  row-active-border">
                             <span class="header-size">May 28, 2023 | Friday</span>
@@ -75,56 +100,400 @@
                             <span class="m-auto">en</span>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-1"></div>
-                        <div class="col-8 mt-4">
-                            <div class="row">
-                                <div class="col-2 m-2 p-2 d-flex justify-content-center active-border" style="border-radius: 16px;">1 day</div>
-                                <div class="col-2 m-2 p-2 d-flex justify-content-center active-border" style="border-radius: 16px;">7 days</div>
-                                <div class="col-2 m-2 p-2 d-flex justify-content-center active-border" style="border-radius: 16px;">30 days</div>
-                                <div class="col-2 m-2 p-2 d-flex justify-content-center active-border" style="border-radius: 16px;">90 days</div>
+
+                    <div id="dashboard-content">
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-8 mt-4">
+                                <div class="row">
+                                    <div class="col-2 m-2 p-2 d-flex justify-content-center active-border"
+                                        style="border-radius: 16px;">1 day</div>
+                                    <div class="col-2 m-2 p-2 d-flex justify-content-center active-border"
+                                        style="border-radius: 16px;">7 days</div>
+                                    <div class="col-2 m-2 p-2 d-flex justify-content-center active-border"
+                                        style="border-radius: 16px;">30 days</div>
+                                    <div class="col-2 m-2 p-2 d-flex justify-content-center active-border"
+                                        style="border-radius: 16px;">90 days</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-2">
+                            <div class="col-1"></div>
+                            <div class="col-2 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                                <span class="d-block title-size p-border-bot">AVERAGE PROFIT</span>
+                                <span class="d-block value-size p-border-bot">2,104</span>
+                                <span class="d-block rate-size p-border-bot">20%</span>
+                            </div>
+                            <div class="col-2 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                                <span class="d-block title-size p-border-bot">TRADES</span>
+                                <span class="d-block value-size p-border-bot">37</span>
+                                <span class="d-block rate-size p-border-bot">15%</span>
+                            </div>
+                            <div class="col-2 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                                <span class="d-block title-size p-border-bot">TOTAL PROFIT</span>
+                                <span class="d-block value-size p-border-bot">2,104</span>
+                                <span class="d-block rate-size p-border-bot">7.3%</span>
+                            </div>
+                            <div class="col-2 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                                <span class="d-block title-size p-border-bot">TOTAL PERCENTAGE GAIN</span>
+                                <span class="d-block value-size p-border-bot">2,104</span>
+                                <span class="d-block rate-size p-border-bot">1.3%</span>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+
+                        <div class="row mt-4">
+                            <div class="col-1"></div>
+                            <div class="col-10 active-border">
+                                <span>3rd party graph</span>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-1"></div>
+                            <div class="col-10 active-border">
+                                <span>3rd party graph</span>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div>
+
+                    <div id="profile-content" class="hidden">
+                        <div class="content-body">
+                            <div class="d-block">
+                                <div class="row pt-4">
+                                    <div class="col-1"></div>
+                                    <div class="col-8">
+                                        <div class="row">
+                                            <div class="col-3 m-2 p-2 d-flex justify-content-left">PROFILES</div>
+                                            <div class="col-4 m-2 p-2 d-flex justify-content-left">RECOMMENDED PROFILES
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="m-2 p-2 d-flex justify-content-left">3 / 4 Profiles Active</div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-2">
+                                    <div class="col-1"></div>
+
+                                    <div class="col-10 d-flex">
+                                        <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                            style="border-radius: 16px;" onClick="showChangeStatusPopup()">
+                                            <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                alt="User">
+                                            <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                            <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                        </div>
+
+                                        <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                            style="border-radius: 16px;">
+                                            <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                alt="User">
+                                            <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                            <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                        </div>
+
+                                        <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                            style="border-radius: 16px;">
+                                            <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                alt="User">
+                                            <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                            <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                        </div>
+
+                                        <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                            style="border-radius: 16px;">
+                                            <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                alt="User">
+                                            <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                            <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-1"></div>
+                                </div>
+
+                                <div class="row mt-2">
+                                    <div class="col-1"></div>
+
+                                    <div class="col-10 d-flex">
+                                        <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                            style="border-radius: 16px;">
+                                            <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                alt="User">
+                                            <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                            <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                        </div>
+
+                                        <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                            style="border-radius: 16px;">
+                                            <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                alt="User">
+                                            <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                            <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                        </div>
+
+                                        <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                            style="border-radius: 16px;">
+                                            <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                alt="User">
+                                            <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                            <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                        </div>
+
+                                        <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                            style="border-radius: 16px;">
+                                            <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                alt="User">
+                                            <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                            <span class="d-block status-size p-border-bot">ACTIVE</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-1"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div style="height: 40px;"></div>
+                                </div>
+                            </div>
+
+                            <div class="popup-container d-flex" id="statusPopUp">
+                                <div class="d-flex popup-bg"> </div>
+                                <div class="popup stack-top p-2 text-center">
+                                    <div class="d-flex">
+                                        <img class="ms-auto h-40 w-40 popup-icon-close"
+                                            src="../resources/popup-close.png" alt="close"
+                                            onClick="hideChangeStatusPopup()">
+                                    </div>
+                                    <div class="p-2">
+                                        <h3>Trading-News</h3>
+                                        <span>Do you want to activate this profile now?</span>
+
+                                        <div class="d-flex justify-content-center mt-3">
+                                            <button class="yes-btn px-4 py-1 me-3"
+                                                onclick="hideChangeStatusPopup()">YES</button>
+                                            <button class="no-btn px-4 py-1"
+                                                onclick="hideChangeStatusPopup()">NO</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row mt-2">
-                        <div class="col-1"></div>
-                        <div class="col-2 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                            <span class="d-block title-size p-border-bot">AVERAGE PROFIT</span>
-                            <span class="d-block value-size p-border-bot">2,104</span>
-                            <span class="d-block rate-size p-border-bot">20%</span>
+                    <div id="settings-content" class="hidden">
+                        <div class="content-body">
+                            <div class="row">
+                                <div class="col-4 d-flex">
+                                    <div class="m-auto mt-5">
+                                        <img class="m-auto" src="../resources/profile-placeholder.png"
+                                            alt="Profile placeholder">
+                                        <div class="mt-4">
+                                            <span class="d-block detail-size">IGOR KRYSIK</span>
+                                            <span class="d-block detail-size">igorkrysik@gmail.com</span>
+                                            <span class="d-block detail-size">+43 123456 78</span>
+                                        </div>
+
+                                        <div class="mt-5">
+                                            <a href='#' class="d-block" style="color: #616EEC;"
+                                                onclick="showContent('update-profile-content')">Change name</a>
+                                            <a href='#' class="d-block" style="color: #616EEC;"
+                                                onclick="showContent('update-profile-content')">Change email</a>
+                                            <a href='#' class="d-block" style="color: #616EEC;"
+                                                onclick="showContent('update-profile-content')">Change password</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="row mt-5">
+                                        <div class="col-4 ps-0">
+                                            <div class="active-border py-2 px-3 row1-size text-center"
+                                                style="border-radius: 16px;">
+                                                <span>ACCOUNT LIST</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-1"></div>
+                                        <div class="col-4">
+                                            <div class="active-border py-2 px-3 row1-size text-center"
+                                                style="border-radius: 16px;">
+                                                <span>CREATE NEW ACCOUNT</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-5">
+                                        <div class="active-border py-3 px-4" style="border-radius: 16px;">
+
+                                            <span class="d-block">License type: 10 000$</span>
+                                            <span class="d-block">Product Key: TEM8S2-2ET83-CGKP1-DPSI2-EPZO1</span>
+
+                                            <div class="row mt-4">
+                                                <div class="col-4">
+                                                    <span class="d-block">Expiry date:</span>
+                                                    <span class="d-block">01.01.2024</span>
+                                                </div>
+                                                <div class="col-4">
+                                                    <span class="d-block">Linked to:</span>
+                                                    <span class="d-block">Angela</span>
+                                                </div>
+
+                                                <div class="col-4 active-border py-2 px-4 text-center d-flex"
+                                                    style="border-radius: 16px;" onClick="showChangeStatusPopup()">
+                                                    <span class="m-auto">UNBIND</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-5">
+                                        <div class="active-border py-3 px-4" style="border-radius: 16px;">
+
+                                            <span class="d-block" style="color: #616EEC;">PURCHASE HISTORY</span>
+
+                                            <div class="row mt-4 text-left">
+                                                <div class="col-3">
+                                                    <span class="d-block">Date:</span>
+                                                    <span class="d-block">03.30.2023</span>
+                                                </div>
+                                                <div class="col-3">
+                                                    <span class="d-block">Invoice #:</span>
+                                                    <span class="d-block">IK03302023</span>
+                                                </div>
+
+                                                <div class="col-3">
+                                                    <span class="d-block">Total:</span>
+                                                    <span class="d-block">$100</span>
+                                                </div>
+
+                                                <div class="col-3 d-flex">
+                                                    <span class="mt-auto me-auto"
+                                                        style="color: #616EEC;">DONWLOAD</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-5">
+                                        <div class="col-4 d-flex">
+                                            <span class="my-auto">Payment Method</span>
+                                        </div>
+                                        <div class="col-4">
+                                            <img class="m-auto" src="../resources/paypal-icon.png" alt="Paypal">
+                                        </div>
+                                        <div class="col-4">
+                                            <img class="m-auto" src="../resources/visa-icon.png" alt="Visa">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="popup-container d-flex" id="statusPopUp">
+                                <div class="d-flex popup-bg"> </div>
+                                <div class="popup stack-top p-2 text-center">
+                                    <div class="d-flex">
+                                        <img class="ms-auto h-40 w-40 popup-icon-close"
+                                            src="../resources/popup-close.png" alt="close"
+                                            onClick="hideChangeStatusPopup()">
+                                    </div>
+                                    <div class="p-2">
+                                        <span>Do you really want to unbind the license (this will close the
+                                            program)?</span>
+
+                                        <div class="d-flex justify-content-center mt-3">
+                                            <button class="yes-btn px-4 py-1 me-3"
+                                                onclick="hideChangeStatusPopup()">YES</button>
+                                            <button class="no-btn px-4 py-1"
+                                                onclick="hideChangeStatusPopup()">NO</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-2 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                            <span class="d-block title-size p-border-bot">TRADES</span>
-                            <span class="d-block value-size p-border-bot">37</span>
-                            <span class="d-block rate-size p-border-bot">15%</span>
-                        </div>
-                        <div class="col-2 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                            <span class="d-block title-size p-border-bot">TOTAL PROFIT</span>
-                            <span class="d-block value-size p-border-bot">2,104</span>
-                            <span class="d-block rate-size p-border-bot">7.3%</span>
-                        </div>
-                        <div class="col-2 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
-                            <span class="d-block title-size p-border-bot">TOTAL PERCENTAGE GAIN</span>
-                            <span class="d-block value-size p-border-bot">2,104</span>
-                            <span class="d-block rate-size p-border-bot">1.3%</span>
-                        </div>
-                        <div class="col-1"></div>
                     </div>
 
-                    <div class="row mt-4">
-                        <div class="col-1"></div>
-                        <div class="col-10 active-border">
-                            <span>3rd party graph</span>
+                    <div id="update-profile-content" class="hidden">
+                        <div class="row content-body px-5 py-5">
+                            <span class="detail-size">UPDATE ACCOUNT INFORMATION</span>
+
+                            <div class="row mt-4">
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">NEW NAME</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">NEW EMAIL</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">OLD PASSWORD</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">NEW PASSWORD</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">CONFIRM NEW PASSWORD</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-1"></div>
-                    </div>
-                    <div class="row mt-4">
-                        <div class="col-1"></div>
-                        <div class="col-10 active-border">
-                            <span>3rd party graph</span>
+
+                        <div class="row px-5">
+                            <div class="d-flex">
+                                <div class="active-border me-2" style="height: 25px; width: 25px;"></div>
+                                <div class="d-flex">
+                                    <span class="m-auto text-center">SHOW PASSWORD</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-1"></div>
+
+                        <div class="row px-5 mt-4">
+                            <div class="col-4"></div>
+                            <div class="col-4"></div>
+                            <div class="col-4 d-flex justify-content-right">
+                                <button class="save-btn px-4 ms-auto" onclick="">SAVE</button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="row">
@@ -136,86 +505,220 @@
     </div>
 </body>
 <style>
-.title-size { font-size: 12px;}
-.value-size { font-size: 40px; }
-.rate-size { font-size: 16px; }
+    .save-btn {
+        width: 100%;
+        background-color: #616EEC;
+        border-radius: 16px;
+    }
 
-.header-size { font-size: 20px; }
-.side-menu-active-border {
-    border-top: 0px;
-    border-right: 1px;
-    border-bottom: 0px;
-    border-left: 0px;
-    border-style: solid;
-    border-color: #7E7E7E;
-}
+    .label-size {
+        font-size: 16px;
+    }
 
-.icon {
-    height: 24px;
-    width: 24px;
-}
+    .detail-size {
+        font-size: 20px;
+    }
 
-.border-top { border-top: 1px solid #7E7E7E !important; }
-.border-right { border-right: 1px solid #7E7E7E !important; }
-.border-bottom { border-bottom: 1px solid #7E7E7E !important; }
+    .yes-btn {
+        background: #11FFC6;
+    }
 
-.border-x {
-    border-top: 1px;
-    border-right: 0px;
-    border-bottom: 1px;
-    border-left: 0px;
-    border-style: solid;
-    border-color: #7E7E7E;
-}
+    .no-btn {
+        background: #EA2A4C;
+    }
 
-.row-active-border {
-    border-top: 0px;
-    border-right: 1px;
-    border-bottom: 1px;
-    border-left: 0px;
-    border-style: solid;
-    border-color: #7E7E7E;
-}
+    .stack-top {
+        z-index: 9;
+    }
 
-.active-border {
-    border-top: 1px;
-    border-right: 1px;
-    border-bottom: 1px;
-    border-left: 1px;
-    border-style: solid;
-    border-color: #7E7E7E;
-    border-radius: 3px;
-}
+    .content-body {
+        position: relative;
+    }
 
-.p-border-bot { margin-bottom: 0px !important; }
-.body-container { margin: 40px auto auto auto }
+    .popup-icon-close {
+        height: 28px;
+        width: 28px;
+    }
 
-.body-bg {
-    color: #FFFFFF;
-    background-color: #0F0F0F;
-    width: 100%;
-    height: 100vh;
-}
+    .open-popup {
+        visibility: visible !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
 
-.side-menu-divider {
-    display: flex;
-    margin: auto;
-    width: 90%;
-    height: 1px;
-    background-color: #7E7E7E;
-}
-.side-menu {
-    background-color: blue;
-    height: 100%;
-    width: 10%;
-}
+    .popup-bg {
+        opacity: 0.6;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        background: black;
+    }
 
-.main-body {
-    background-color: green;
-    height: 100%;
-    width: auto;
-}
+    .popup {
+        border: 2px solid #7E7E7E;
+        border-radius: 16px;
+        margin: auto;
+        background-color: #333333;
+        color: #FFFFFF;
+        height: auto;
+        max-width: 250px;
+    }
 
-body { font-family: 'Rajdhani', sans-serif; }
+    .popup-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 0;
+        visibility: hidden;
+        transform: translate(-50%, -50%) scale(0.1);
+        transition: transform 0.4s, top 0.4s;
+    }
+
+    .title-size {
+        font-size: 12px;
+    }
+
+    .value-size {
+        font-size: 40px;
+    }
+
+    .rate-size {
+        font-size: 16px;
+    }
+
+    .header-size {
+        font-size: 20px;
+    }
+
+    .side-menu-active-border {
+        border-top: 0px;
+        border-right: 1px;
+        border-bottom: 0px;
+        border-left: 0px;
+        border-style: solid;
+        border-color: #7E7E7E;
+    }
+
+    .icon {
+        height: 24px;
+        width: 24px;
+    }
+
+    .border-top {
+        border-top: 1px solid #7E7E7E !important;
+    }
+
+    .border-right {
+        border-right: 1px solid #7E7E7E !important;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid #7E7E7E !important;
+    }
+
+    .border-x {
+        border-top: 1px;
+        border-right: 0px;
+        border-bottom: 1px;
+        border-left: 0px;
+        border-style: solid;
+        border-color: #7E7E7E;
+    }
+
+    .row-active-border {
+        border-top: 0px;
+        border-right: 1px;
+        border-bottom: 1px;
+        border-left: 0px;
+        border-style: solid;
+        border-color: #7E7E7E;
+    }
+
+    .active-border {
+        border-top: 1px;
+        border-right: 1px;
+        border-bottom: 1px;
+        border-left: 1px;
+        border-style: solid;
+        border-color: #7E7E7E;
+        border-radius: 3px;
+    }
+
+    .p-border-bot {
+        margin-bottom: 0px !important;
+    }
+
+    .body-container {
+        margin: 40px auto auto auto
+    }
+
+    .body-bg {
+        color: #FFFFFF;
+        background-color: #0F0F0F;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .side-menu-divider {
+        display: flex;
+        margin: auto;
+        width: 90%;
+        height: 1px;
+        background-color: #7E7E7E;
+    }
+
+    .side-menu {
+        background-color: blue;
+        height: 100%;
+        width: 10%;
+    }
+
+    .main-body {
+        background-color: green;
+        height: 100%;
+        width: auto;
+    }
+
+    body {
+        font-family: 'Rajdhani', sans-serif;
+    }
 </style>
+<script>
+    let popup = document.getElementById("statusPopUp");
+
+    function showChangeStatusPopup() {
+        popup.classList.add("open-popup");
+    }
+    function hideChangeStatusPopup() {
+        popup.classList.remove("open-popup");
+    }
+
+    function updateActiveTab() {
+        var tabs = document.getElementsByClassName('sidebar-tab');
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].addEventListener('click', function () {
+                for (var j = 0; j < tabs.length; j++) {
+                    tabs[j].classList.remove('active');
+                }
+                this.classList.add('active');
+            });
+        }
+    }
+
+    function showContent(id) {
+        var divs = document.querySelectorAll('div[id]');
+        for (var i = 0; i < divs.length; i++) {
+            if (divs[i].id === id) {
+                divs[i].classList.remove('hidden');
+            } else {
+                divs[i].classList.add('hidden');
+            }
+        }
+    }
+
+    updateActiveTab();
+</script>
+
 </html>
