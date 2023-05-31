@@ -10,6 +10,7 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <style>
@@ -72,11 +73,11 @@
                             <span class="my-auto header-size">Hey Igor!</span>
                         </div>
                         <div class="p-3 col-md-6 row-active-border d-flex">
-                            <div class="input-group m-auto">
+                            <div class="input-group m-auto search-bar">
                                 <input type="text" class="form-control" placeholder="Search"
                                     aria-label="Recipient's username" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary" type="button">Button</button>
+                                    <button type="button"><i class="material-icons">search</i></button>
                                 </div>
                             </div>
                         </div>
@@ -505,6 +506,33 @@
     </div>
 </body>
 <style>
+    .search-bar {
+      border-radius: 50px;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+    }
+
+    .search-bar input {
+        flex: 1;
+        border: none;
+        outline: none;
+        border-radius: 50px;
+    }
+
+    .search-bar input:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .search-bar button {
+        border: none;
+        background-color: white;
+        padding: 5px;
+        cursor: pointer;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+
     .save-btn {
         width: 100%;
         background-color: #616EEC;
