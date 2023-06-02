@@ -52,7 +52,8 @@
                         <span class="side-menu-divider mt-2"></span>
 
                         <div class="p-3 d-flex">
-                            <a href="#" class="d-block mx-auto text-center sidebar-tab">CREATE NEW PROFILE</a>
+                            <a href="#" class="d-block mx-auto text-center sidebar-tab"
+                                onclick="showContent('create-new-profile-content')">CREATE NEW PROFILE</a>
                         </div>
                         <span class="side-menu-divider mt-2"></span>
 
@@ -497,6 +498,182 @@
                         </div>
                     </div>
 
+                    <div id="create-new-profile-content" class="hidden">
+                        <div class="row content-body px-5 py-5">
+                            <span class="detail-size">CREATE NEW PROFILE</span>
+
+                            <div class="row mt-4">
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Profile Name</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Bybit API Key:</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Bybit Secret API</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Discord Webhook URL:</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Binance ID:</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Max Bybit-Binance Price Difference:</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Leverage:</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Initial Open Percent:</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Open Delay:</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Max Percentage Per Coin:</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Blacklisted Coins:</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Max Open Positions:</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Auto Take Profit:</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Auto Stop Loss:</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-4">
+                                    <div class="row mt-3">
+                                        <span class="label-size">Traider's Minimal position size:</span>
+                                        <div class="mt-2">
+                                            <div class="active-border" style="height: 24px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row px-5 mt-4">
+                            <div class="col-4"></div>
+                            <div class="col-4">
+                                <div class="active-border py-2 px-3 row1-size text-center" style="border-radius: 16px;">
+                                    <span>BACK</span>
+                                </div>
+                            </div>
+                            <div class="col-4 d-flex justify-content-right">
+                                <button class="save-btn px-4 ms-auto" onclick="">SAVE</button>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="row">
                         <div style="height: 40px;"></div>
                     </div>
@@ -507,9 +684,9 @@
 </body>
 <style>
     .search-bar {
-      border-radius: 50px;
-      border-top-left-radius: 50px;
-      border-bottom-left-radius: 50px;
+        border-radius: 50px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
     }
 
     .search-bar input {
