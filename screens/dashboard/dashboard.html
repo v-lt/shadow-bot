@@ -33,8 +33,8 @@
 <body>
     <div class="body-bg d-flex">
         <div class="container py-4 body-container">
-            <div class="row p-1 py-2 p-lg-0">
-                <div id="side-menu"class="col-2 col-md-2 border-right pt-3 pt-lg-0">
+            <div class="row p-1 py-2 py-lg-0  px-2 px-lg-0">
+                <div id="side-menu" class="col-2 pe-2 ps-1 pt-lg-0">
                     <div class="p-0 p-lg-3 d-flex">
                         <img class="m-auto img-fluid" src="../resources/icon.png" alt="Logo">
                     </div>
@@ -42,7 +42,7 @@
                         <div>
                             <div class="d-xs d-lg-none d-flex">
                                 <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
-                                    alt="Shut down"></span>
+                                    alt="Shut down" onclick="showContent('dashboard-content')"></span>
                             </div>
                             <div class="d-none d-lg-flex p-3">
                                 <a href="#" class="d-block mx-auto sidebar-tab active"
@@ -55,7 +55,7 @@
                         <div>
                             <div class="d-xs d-lg-none d-flex">
                                 <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
-                                    alt="Shut down"></span>
+                                    alt="Shut down" onclick="showContent('profile-content')"></span>
                             </div>
                             <div class="d-none d-lg-flex p-3">
                                 <a href="#" class="d-block mx-auto sidebar-tab"
@@ -68,7 +68,7 @@
                         <div>
                             <div class="d-xs d-lg-none d-flex">
                                 <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
-                                    alt="Shut down"></span>
+                                    alt="Shut down" onclick="showContent('create-new-profile-content')"></span>
                             </div>
                             <div class="d-none d-lg-flex p-3">
                                 <a href="#" class="d-block mx-auto text-center sidebar-tab"
@@ -93,7 +93,7 @@
                         <div>
                             <div class="d-xs d-lg-none d-flex">
                                 <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
-                                    alt="Shut down"></span>
+                                    alt="Shut down" onclick="showContent('settings-content')"></span>
                             </div>
                             <div class="d-none d-lg-flex p-3">
                                 <a href="#" class="d-block mx-auto text-center sidebar-tab"
@@ -103,76 +103,106 @@
                     </div>
                 </div>
 
-                <div class="col-10 col-md-10 border-top">
+                <div class="col-10 border-container">
                     <div class="row">
-                        <div class="p-3 col-md-4 row-active-border d-flex">
-                            <span class="my-auto header-size">Hey Igor!</span>
-                        </div>
-                        <div class="p-3 col-md-6 row-active-border d-flex">
-                            <div class="input-group m-auto search-bar">
-                                <input type="text" class="form-control" placeholder="Search"
-                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-                                    <button type="button"><i class="material-icons">search</i></button>
+                        <div class="d-block d-md-none">
+                            <div class="row border-bottom">
+                                <div class="col-12">
+                                    <div class="p-3 col-md-6 d-flex">
+                                        <div class="input-group m-auto search-bar">
+                                            <input type="text" class="form-control" placeholder="Search"
+                                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button type="button"><i class="material-icons">search</i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="p-3 col-8 row-active-border d-flex">
+                                    <span class="my-auto header-size">Hey Igor!</span>
+                                </div>
+                                <div class="p-3 col-2 row-active-border d-flex">
+                                    <span class="m-auto"><img class="icon" src="../resources/notification.png"
+                                            alt="Notification"></span>
+                                </div>
+                                <div class="p-3 col-2 border-bottom d-flex">
+                                    <span class="m-auto"><img class="icon" src="../resources/shutdown-icon-white.png"
+                                            alt="Shut down"></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="p-3 col-md-1 row-active-border d-flex">
-                            <span class="m-auto"><img class="icon" src="../resources/notification.png"
-                                    alt="Notification"></span>
-                        </div>
-                        <div class="p-3 col-md-1 border-bottom d-flex">
-                            <span class="m-auto"><img class="icon" src="../resources/shutdown-icon-white.png"
-                                    alt="Shut down"></span>
+                        <div class="d-none d-md-flex p-0">
+                            <div class="p-3 col-md-4 d-flex">
+                                <span class="my-auto header-size">Hey Igor!</span>
+                            </div>
+                            <div class="p-3 col-md-6 d-flex">
+                                <div class="input-group m-auto search-bar">
+                                    <input type="text" class="form-control" placeholder="Search"
+                                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button type="button"><i class="material-icons">search</i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3 col-md-1 d-flex">
+                                <span class="m-auto"><img class="icon" src="../resources/notification.png"
+                                        alt="Notification"></span>
+                            </div>
+                            <div class="p-3 col-md-1 d-flex">
+                                <span class="m-auto"><img class="icon" src="../resources/shutdown-icon-white.png"
+                                        alt="Shut down"></span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="p-3 col-md-4  row-active-border">
+                    <div class="row border-top">
+                        <div class="p-3 col-10 col-lg-4  row-active-border">
                             <span class="header-size">May 28, 2023 | Friday</span>
                         </div>
-                        <div class="p-2 col-md-6 row-active-border"></div>
-                        <div class="p-2 col-md-1 row-active-border"></div>
-                        <div class="p-2 col-md-1 border-bottom d-flex">
+                        <div class="p-2 d-none d-lg-block col-lg-6 row-active-border"></div>
+                        <div class="p-2 d-none d-lg-block col-lg-1 row-active-border"></div>
+                        <div class="p-2 d-lg-flex d-lg-block col-2 col-lg-1 border-bottom d-flex">
                             <span class="m-auto">en</span>
                         </div>
                     </div>
 
                     <div id="dashboard-content">
                         <div class="row">
-                            <div class="col-1"></div>
-                            <div class="col-8 mt-4">
-                                <div class="row">
-                                    <div class="col-2 m-2 p-2 d-flex justify-content-center active-border"
+                            <div class="d-none d-md-block col-md-1"></div>
+                            <div class="col-12 col-md-8 my-3 mt-md-4">
+                                <div class="row flex-nowrap overflow-auto">
+                                    <div class="col-4 col-md-2 m-2 p-2 d-flex justify-content-center active-border"
                                         style="border-radius: 16px;">1 day</div>
-                                    <div class="col-2 m-2 p-2 d-flex justify-content-center active-border"
+                                    <div class="col-4 col-md-2 m-2 p-2 d-flex justify-content-center active-border"
                                         style="border-radius: 16px;">7 days</div>
-                                    <div class="col-2 m-2 p-2 d-flex justify-content-center active-border"
+                                    <div class="col-4 col-md-2 m-2 p-2 d-flex justify-content-center active-border"
                                         style="border-radius: 16px;">30 days</div>
-                                    <div class="col-2 m-2 p-2 d-flex justify-content-center active-border"
+                                    <div class="col-4 col-md-2 m-2 p-2 d-flex justify-content-center active-border"
                                         style="border-radius: 16px;">90 days</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row mt-2">
-                            <div class="col-1"></div>
-                            <div class="col-2 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                        <div class="row mt-3 mt-md-2 px-3 px-md-0">
+                            <div class="d-none d-md-block col-md-1"></div>
+                            <div class="col-12 col-md-2 py-2 px-0 mx-md-2 my-2 my-md-0 text-center active-border" style="border-radius: 16px;">
                                 <span class="d-block title-size p-border-bot">AVERAGE PROFIT</span>
                                 <span class="d-block value-size p-border-bot">2,104</span>
                                 <span class="d-block rate-size p-border-bot">20%</span>
                             </div>
-                            <div class="col-2 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                            <div class="col-12 col-md-2 py-2 px-0 mx-md-2 my-2 my-md-0 text-center active-border" style="border-radius: 16px;">
                                 <span class="d-block title-size p-border-bot">TRADES</span>
                                 <span class="d-block value-size p-border-bot">37</span>
                                 <span class="d-block rate-size p-border-bot">15%</span>
                             </div>
-                            <div class="col-2 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                            <div class="col-12 col-md-2 py-2 px-0 mx-md-2 my-2 my-md-0 text-center active-border" style="border-radius: 16px;">
                                 <span class="d-block title-size p-border-bot">TOTAL PROFIT</span>
                                 <span class="d-block value-size p-border-bot">2,104</span>
                                 <span class="d-block rate-size p-border-bot">7.3%</span>
                             </div>
-                            <div class="col-2 py-2 px-0 mx-2 text-center active-border" style="border-radius: 16px;">
+                            <div class="col-12 col-md-2 py-2 px-0 mx-md-2 my-2 my-md-0 text-center active-border" style="border-radius: 16px;">
                                 <span class="d-block title-size p-border-bot">TOTAL PERCENTAGE GAIN</span>
                                 <span class="d-block value-size p-border-bot">2,104</span>
                                 <span class="d-block rate-size p-border-bot">1.3%</span>
@@ -826,10 +856,17 @@
     }
 
     .icon {
-        height: 24px;
-        width: 24px;
+        height: 100%;
+        width: 28px;
+    }
+    @media screen and (max-width: 920px) {
+        .icon {
+            height: 100%;
+            width: 20px;
+        }
     }
 
+    .border-container { border: 1px solid #7E7E7E !important; }
     .border-top { border-top: 1px solid #7E7E7E !important; }
     .border-right { border-right: 1px solid #7E7E7E !important; }
     .border-bottom { border-bottom: 1px solid #7E7E7E !important; }
@@ -870,6 +907,12 @@
         background-color: #0F0F0F;
         width: 100%;
         height: 100vh;
+    }
+    @media screen and (max-width: 920px) {
+        .body-bg {
+            height: 100%;
+            width: 100%;
+        }
     }
 
     .side-menu-divider {
