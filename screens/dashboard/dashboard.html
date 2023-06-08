@@ -33,42 +33,77 @@
 <body>
     <div class="body-bg d-flex">
         <div class="container py-4 body-container">
-            <div class="row">
-                <div class="col-1 col-md-2 border-right">
-                    <div class="p-3 d-flex">
-                        <img class="m-auto h-100 w-100" src="../resources/icon.png" alt="Logo">
+            <div class="row p-1 py-2 p-lg-0">
+                <div id="side-menu"class="col-2 col-md-2 border-right pt-3 pt-lg-0">
+                    <div class="p-0 p-lg-3 d-flex">
+                        <img class="m-auto img-fluid" src="../resources/icon.png" alt="Logo">
                     </div>
                     <div class="mt-4">
-                        <div class="p-3 d-flex">
-                            <a href="#" class="d-block mx-auto sidebar-tab active"
-                                onclick="showContent('dashboard-content')">DASHBOARD</a>
+                        <div>
+                            <div class="d-xs d-lg-none d-flex">
+                                <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
+                                    alt="Shut down"></span>
+                            </div>
+                            <div class="d-none d-lg-flex p-3">
+                                <a href="#" class="d-block mx-auto sidebar-tab active"
+                                    onclick="showContent('dashboard-content')">DASHBOARD</a>
+                            </div>
                         </div>
-                        <span class="side-menu-divider mt-2"></span>
 
-                        <div class="p-3 d-flex">
-                            <a href="#" class="d-block mx-auto sidebar-tab"
-                                onclick="showContent('profile-content')">PROFILES</a>
+                        <span class="side-menu-divider my-3 my-lg-2"></span>
+
+                        <div>
+                            <div class="d-xs d-lg-none d-flex">
+                                <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
+                                    alt="Shut down"></span>
+                            </div>
+                            <div class="d-none d-lg-flex p-3">
+                                <a href="#" class="d-block mx-auto sidebar-tab"
+                                    onclick="showContent('profile-content')">PROFILES</a>
+                            </div>
                         </div>
-                        <span class="side-menu-divider mt-2"></span>
 
-                        <div class="p-3 d-flex">
-                            <a href="#" class="d-block mx-auto text-center sidebar-tab"
-                                onclick="showContent('create-new-profile-content')">CREATE NEW PROFILE</a>
+                        <span class="side-menu-divider my-3 my-lg-2"></span>
+
+                        <div>
+                            <div class="d-xs d-lg-none d-flex">
+                                <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
+                                    alt="Shut down"></span>
+                            </div>
+                            <div class="d-none d-lg-flex p-3">
+                                <a href="#" class="d-block mx-auto text-center sidebar-tab"
+                                    onclick="showContent('create-new-profile-content')">CREATE NEW PROFILE</a>
+                            </div>
                         </div>
-                        <span class="side-menu-divider mt-2"></span>
 
-                        <div class="p-3 d-flex">
-                            <a href="#" class="d-block mx-auto text-center sidebar-tab">RECOMMENDED PROFILES</a>
+                        <span class="side-menu-divider my-3 my-lg-2"></span>
+
+                        <div>
+                            <div class="d-xs d-lg-none d-flex">
+                                <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
+                                    alt="Shut down"></span>
+                            </div>
+                            <div class="d-none d-lg-flex p-3">
+                                <a href="#" class="d-block mx-auto text-center sidebar-tab">RECOMMENDED PROFILES</a>
+                            </div>
                         </div>
-                        <span class="side-menu-divider mt-2"></span>
 
-                        <div class="p-3 d-flex">
-                            <a href="#" class="d-block mx-auto text-center sidebar-tab"
-                                onclick="showContent('settings-content')">ACCOUNT SETTINGS</a>
+                        <span class="side-menu-divider my-3 my-lg-2"></span>
+
+                        <div>
+                            <div class="d-xs d-lg-none d-flex">
+                                <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
+                                    alt="Shut down"></span>
+                            </div>
+                            <div class="d-none d-lg-flex p-3">
+                                <a href="#" class="d-block mx-auto text-center sidebar-tab"
+                                    onclick="showContent('settings-content')">ACCOUNT SETTINGS</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-11 col-md-10 border-top">
+
+                <div class="col-10 col-md-10 border-top">
                     <div class="row">
                         <div class="p-3 col-md-4 row-active-border d-flex">
                             <span class="my-auto header-size">Hey Igor!</span>
@@ -87,8 +122,8 @@
                                     alt="Notification"></span>
                         </div>
                         <div class="p-3 col-md-1 border-bottom d-flex">
-                            <span class="m-auto"><img class="icon" src="../resources/notification.png"
-                                    alt="Notification"></span>
+                            <span class="m-auto"><img class="icon" src="../resources/shutdown-icon-white.png"
+                                    alt="Shut down"></span>
                         </div>
                     </div>
 
@@ -683,6 +718,18 @@
     </div>
 </body>
 <style>
+    .side-menu-icon {
+        height: 100%;
+        width: 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .side-menu-icon {
+            height: 100%;
+            width: 28px;
+        }
+    }
+
     .search-bar {
         border-radius: 50px;
         border-top-left-radius: 50px;
@@ -716,29 +763,12 @@
         border-radius: 16px;
     }
 
-    .label-size {
-        font-size: 16px;
-    }
-
-    .detail-size {
-        font-size: 20px;
-    }
-
-    .yes-btn {
-        background: #11FFC6;
-    }
-
-    .no-btn {
-        background: #EA2A4C;
-    }
-
-    .stack-top {
-        z-index: 9;
-    }
-
-    .content-body {
-        position: relative;
-    }
+    .label-size { font-size: 16px; }
+    .detail-size { font-size: 20px; }
+    .yes-btn { background: #11FFC6; }
+    .no-btn { background: #EA2A4C; }
+    .stack-top { z-index: 9; }
+    .content-body { position: relative; }
 
     .popup-icon-close {
         height: 28px;
@@ -781,21 +811,10 @@
         transition: transform 0.4s, top 0.4s;
     }
 
-    .title-size {
-        font-size: 12px;
-    }
-
-    .value-size {
-        font-size: 40px;
-    }
-
-    .rate-size {
-        font-size: 16px;
-    }
-
-    .header-size {
-        font-size: 20px;
-    }
+    .title-size { font-size: 12px; }
+    .value-size { font-size: 40px; }
+    .rate-size { font-size: 16px;}
+    .header-size { font-size: 20px; }
 
     .side-menu-active-border {
         border-top: 0px;
@@ -811,17 +830,9 @@
         width: 24px;
     }
 
-    .border-top {
-        border-top: 1px solid #7E7E7E !important;
-    }
-
-    .border-right {
-        border-right: 1px solid #7E7E7E !important;
-    }
-
-    .border-bottom {
-        border-bottom: 1px solid #7E7E7E !important;
-    }
+    .border-top { border-top: 1px solid #7E7E7E !important; }
+    .border-right { border-right: 1px solid #7E7E7E !important; }
+    .border-bottom { border-bottom: 1px solid #7E7E7E !important; }
 
     .border-x {
         border-top: 1px;
@@ -851,13 +862,8 @@
         border-radius: 3px;
     }
 
-    .p-border-bot {
-        margin-bottom: 0px !important;
-    }
-
-    .body-container {
-        margin: 40px auto auto auto
-    }
+    .p-border-bot { margin-bottom: 0px !important; }
+    .body-container { margin: 40px auto auto auto }
 
     .body-bg {
         color: #FFFFFF;
@@ -886,9 +892,7 @@
         width: auto;
     }
 
-    body {
-        font-family: 'Rajdhani', sans-serif;
-    }
+    body { font-family: 'Rajdhani', sans-serif; }
 </style>
 <script>
     let popup = document.getElementById("statusPopUp");
