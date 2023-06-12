@@ -42,7 +42,7 @@
                         <div>
                             <div class="d-xs d-lg-none d-flex">
                                 <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
-                                    alt="Shut down" onclick="showContent('dashboard-content')"></span>
+                                    alt="Shut down" onclick="showContent('dashboard-content')">
                             </div>
                             <div class="d-none d-lg-flex p-3">
                                 <a href="#" class="d-block mx-auto sidebar-tab active"
@@ -55,7 +55,7 @@
                         <div>
                             <div class="d-xs d-lg-none d-flex">
                                 <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
-                                    alt="Shut down" onclick="showContent('profile-content')"></span>
+                                    alt="Shut down" onclick="showContent('profile-content')">
                             </div>
                             <div class="d-none d-lg-flex p-3">
                                 <a href="#" class="d-block mx-auto sidebar-tab"
@@ -68,7 +68,7 @@
                         <div>
                             <div class="d-xs d-lg-none d-flex">
                                 <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
-                                    alt="Shut down" onclick="showContent('create-new-profile-content')"></span>
+                                    alt="Shut down" onclick="showContent('create-new-profile-content')">
                             </div>
                             <div class="d-none d-lg-flex p-3">
                                 <a href="#" class="d-block mx-auto text-center sidebar-tab"
@@ -93,7 +93,7 @@
                         <div>
                             <div class="d-xs d-lg-none d-flex">
                                 <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
-                                    alt="Shut down" onclick="showContent('settings-content')"></span>
+                                    alt="Shut down" onclick="showContent('settings-content')">
                             </div>
                             <div class="d-none d-lg-flex p-3">
                                 <a href="#" class="d-block mx-auto text-center sidebar-tab"
@@ -168,18 +168,18 @@
                         </div>
                     </div>
 
-                    <div id="dashboard-content">
+                    <div id="dashboard-content" class="content-div">
                         <div class="row">
                             <div class="d-none d-md-block col-md-1"></div>
                             <div class="col-12 col-md-8 my-3 mt-md-4">
                                 <div class="row flex-nowrap overflow-auto">
-                                    <div class="col-4 col-md-2 m-2 p-2 d-flex justify-content-center active-border"
+                                    <div class="col-4 col-md-2 m-2 p-2 d-flex justify-content-center content-pills active-border"
                                         style="border-radius: 16px;">1 day</div>
-                                    <div class="col-4 col-md-2 m-2 p-2 d-flex justify-content-center active-border"
+                                    <div class="col-4 col-md-2 m-2 p-2 d-flex justify-content-center content-pills active-border"
                                         style="border-radius: 16px;">7 days</div>
-                                    <div class="col-4 col-md-2 m-2 p-2 d-flex justify-content-center active-border"
+                                    <div class="col-4 col-md-2 m-2 p-2 d-flex justify-content-center content-pills active-border"
                                         style="border-radius: 16px;">30 days</div>
-                                    <div class="col-4 col-md-2 m-2 p-2 d-flex justify-content-center active-border"
+                                    <div class="col-4 col-md-2 m-2 p-2 d-flex justify-content-center content-pills active-border"
                                         style="border-radius: 16px;">90 days</div>
                                 </div>
                             </div>
@@ -226,7 +226,7 @@
                         </div>
                     </div>
 
-                    <div id="profile-content" class="hidden">
+                    <div id="profile-content" class="hidden content-div">
                         <div class="content-body">
                             <div class="d-block">
                                 <div class="row pt-4">                          
@@ -427,7 +427,7 @@
                         </div>
                     </div>
 
-                    <div id="settings-content" class="hidden">
+                    <div id="settings-content" class="hidden content-div">
                         <div class="content-body">
                             <div class="row">
                                 <div class="col-12 col-md-4 d-flex">
@@ -455,14 +455,14 @@
                                 <div class="col-12 col-md-8">
                                     <div class="row mt-4 mt-md-5 me-md-3 px-2 px-md-0">
                                         <div class="col-6 col-md-4 ps-md-0">
-                                            <div class="active-border py-2 px-3 row1-size text-center"
+                                            <div class="active-border py-2 px-3 row1-size text-center content-pills"
                                                 style="border-radius: 16px;">
                                                 <span>ACCOUNT LIST</span>
                                             </div>
                                         </div>
                                         <div class="d-none d-md-block col-1"></div>
                                         <div class="col-6 col-md-4">
-                                            <div class="active-border py-2 px-3 row1-size text-center"
+                                            <div class="active-border py-2 px-3 row1-size text-center content-pills"
                                                 style="border-radius: 16px;">
                                                 <span 
                                                 onclick="showContent('create-new-account-content')">CREATE NEW ACCOUNT</span>
@@ -486,7 +486,7 @@
                                                     <span class="d-block">Angela</span>
                                                 </div>
 
-                                                <div class="col-4 active-border py-2 px-4 text-center d-flex"
+                                                <div class="col-4 active-border py-2 px-4 text-center d-flex content-pills"
                                                     style="border-radius: 16px;" onClick="showChangeStatusPopup()">
                                                     <span class="m-auto">UNBIND</span>
                                                 </div>
@@ -562,7 +562,7 @@
                         </div>
                     </div>
 
-                    <div id="create-new-account-content" class="hidden">
+                    <div id="create-new-account-content" class="hidden content-div">
 
                         <div class="row content-body px-5 py-5">
                             <span class="detail-size">CREATE NEW ACCOUNT</span>
@@ -658,7 +658,7 @@
                         </div>
                     </div>
 
-                    <div id="update-profile-content" class="hidden">
+                    <div id="update-profile-content" class="hidden content-div">
                         <div class="row content-body px-5 py-5">
                             <span class="detail-size">UPDATE ACCOUNT INFORMATION</span>
 
@@ -741,7 +741,7 @@
                         </div>
                     </div>
 
-                    <div id="create-new-profile-content" class="hidden">
+                    <div id="create-new-profile-content" class="hidden content-div">
                         <div class="row content-body px-2 py-2 px-md-5 py-md-5">
                             <span class="detail-size p-2 p-md-0 text-center">CREATE NEW PROFILE</span>
 
@@ -907,7 +907,7 @@
                         <div class="row px-md-5 mt-4">
                             <div class="d-none d-md-block col-4"></div>
                             <div class="col-6 col-md-4">
-                                <div class="active-border py-2 px-3 row1-size text-center" style="border-radius: 16px;">
+                                <div class="active-border py-2 px-3 row1-size text-center content-pills" style="border-radius: 16px;">
                                     <span>BACK</span>
                                 </div>
                             </div>
@@ -926,6 +926,9 @@
     </div>
 </body>
 <style>
+    .content-pills:hover {
+        cursor: pointer;
+    }
     .hint-font-size {
         font-size: 8px;
     }
@@ -957,6 +960,7 @@
         border: none;
         outline: none;
         border-radius: 50px;
+        height: 34px;
     }
 
     .search-bar input:focus {
@@ -965,12 +969,15 @@
     }
 
     .search-bar button {
+        display: flex;
         border: none;
         background-color: white;
         padding: 5px;
         cursor: pointer;
         border-top-right-radius: 50px;
         border-bottom-right-radius: 50px;
+        justify-content: flex-start;
+        margin-right: 5px;
     }
 
     .save-btn {
@@ -1140,7 +1147,7 @@
     }
 
     function showContent(id) {
-        var divs = document.querySelectorAll('div[id]');
+        var divs = document.querySelectorAll('.content-div');
         for (var i = 0; i < divs.length; i++) {
             if (divs[i].id === id) {
                 divs[i].classList.remove('hidden');
