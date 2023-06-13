@@ -45,7 +45,7 @@
                                     alt="Shut down" onclick="showContent('dashboard-content')">
                             </div>
                             <div class="d-none d-lg-flex p-3">
-                                <a href="#" class="d-block mx-auto sidebar-tab active"
+                                <a href="#" class="side-menu-font d-block mx-auto sidebar-tab active"
                                     onclick="showContent('dashboard-content')">DASHBOARD</a>
                             </div>
                         </div>
@@ -58,7 +58,7 @@
                                     alt="Shut down" onclick="showContent('profile-content')">
                             </div>
                             <div class="d-none d-lg-flex p-3">
-                                <a href="#" class="d-block mx-auto sidebar-tab"
+                                <a href="#" class="side-menu-font d-block mx-auto sidebar-tab"
                                     onclick="showContent('profile-content')">PROFILES</a>
                             </div>
                         </div>
@@ -71,7 +71,7 @@
                                     alt="Shut down" onclick="showContent('create-new-profile-content')">
                             </div>
                             <div class="d-none d-lg-flex p-3">
-                                <a href="#" class="d-block mx-auto text-center sidebar-tab"
+                                <a href="#" class="side-menu-font d-block mx-auto text-center sidebar-tab"
                                     onclick="showContent('create-new-profile-content')">CREATE NEW PROFILE</a>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                                     alt="Shut down"></span>
                             </div>
                             <div class="d-none d-lg-flex p-3">
-                                <a href="#" class="d-block mx-auto text-center sidebar-tab">RECOMMENDED PROFILES</a>
+                                <a href="#" class="side-menu-font d-block mx-auto text-center sidebar-tab">RECOMMENDED PROFILES</a>
                             </div>
                         </div>
 
@@ -96,7 +96,7 @@
                                     alt="Shut down" onclick="showContent('settings-content')">
                             </div>
                             <div class="d-none d-lg-flex p-3">
-                                <a href="#" class="d-block mx-auto text-center sidebar-tab"
+                                <a href="#" class="side-menu-font d-block mx-auto text-center sidebar-tab"
                                     onclick="showContent('settings-content')">ACCOUNT SETTINGS</a>
                             </div>
                         </div>
@@ -234,13 +234,13 @@
                                     <div class="col-12 col-md-8">
                                         <div class="row">
                                             
-                                            <div class="d-flex d-md-none justify-content-md-left justify-content-center">3 / 4 Profiles Active</div>
-                                            <div class="col-12 col-md-3 m-2 p-md-2 d-flex justify-content-left">PROFILES</div>
-                                            <div class="col-12 col-md-4 m-2 p-md-2 d-flex justify-content-left">RECOMMENDED PROFILES</div>
+                                            <div class="d-flex d-md-none justify-content-md-left justify-content-center profiles-font">3 / 4 Profiles Active</div>
+                                            <div class="col-12 col-md-3 m-2 p-md-2 d-flex justify-content-left profiles-font">PROFILES</div>
+                                            <div class="col-12 col-md-4 m-2 p-md-2 d-flex justify-content-left profiles-font">RECOMMENDED PROFILES</div>
                                         </div>
                                     </div>
                                     <div class="col-md-3 d-none d-md-flex">
-                                        <div class="m-md-2 p-2 d-flex justify-content-left">3 / 4 Profiles Active</div>
+                                        <div class="m-md-2 p-2 d-flex justify-content-left profiles-font">3 / 4 Profiles Active</div>
                                     </div>
                                 </div>
 
@@ -565,7 +565,7 @@
                     <div id="create-new-account-content" class="hidden content-div">
 
                         <div class="row content-body px-5 py-5">
-                            <span class="detail-size">CREATE NEW ACCOUNT</span>
+                            <span class="title-screen-size">CREATE NEW ACCOUNT</span>
 
                             <div class="row mt-4">
                                 <div class="col-12 col-md-4">
@@ -654,7 +654,7 @@
 
                     <div id="update-profile-content" class="hidden content-div">
                         <div class="row content-body px-5 py-5">
-                            <span class="detail-size">UPDATE ACCOUNT INFORMATION</span>
+                            <span class="title-screen-size">UPDATE ACCOUNT INFORMATION</span>
 
                             <div class="row mt-4">
                                 <div class="col-12 col-md-4">
@@ -732,7 +732,7 @@
 
                     <div id="create-new-profile-content" class="hidden content-div">
                         <div class="row content-body px-2 py-2 px-md-5 py-md-5">
-                            <span class="detail-size p-2 p-md-0 text-center">CREATE NEW PROFILE</span>
+                            <span class="title-screen-size p-2 p-md-0 text-center">CREATE NEW PROFILE</span>
 
                             <div class="d-block d-md-flex mt-4">
                                 <div class="col-12 col-md-4 p-md-3">
@@ -900,6 +900,13 @@
     </div>
 </body>
 <style>
+    .title-screen-size {
+        font-size: 24px;
+    }
+    .profiles-font {
+        font-size: 20px;
+    }
+
     .input-text-cls {
         border-style: solid;
         border-color: #7E7E7E;
@@ -1020,7 +1027,7 @@
     .title-size { font-size: 12px; }
     .value-size { font-size: 40px; }
     .rate-size { font-size: 16px;}
-    .header-size { font-size: 20px; }
+    .header-size { font-size: 24px; }
 
     .side-menu-active-border {
         border-top: 0px;
@@ -1077,6 +1084,10 @@
 
     .p-border-bot { margin-bottom: 0px !important; }
     .body-container { margin: 40px auto auto auto }
+
+    .side-menu-font {
+        font-size: 20px;
+    }
 
     .side-menu-divider {
         display: flex;
