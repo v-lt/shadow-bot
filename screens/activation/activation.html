@@ -5,198 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 <body>
-    <div class="icon">
-        <i class="fas fa-water"></i>
-      </div>
-    <div id="activation-content" class="activation-content">
-        <img src="../resources/activation_logo.png" alt="logo" />
-        <div>
-            <span class="detail-size">Please Input License Key</span>
+    <div id="activation-content" class="container mt-5">
+        <div class="row p-2 p-md-4 justify-content-center">
+            <img src="../resources/activation-logo.png" alt="logo" class="activation-logo" />
         </div>
-        <div class="active-border" style="height: 40px; border-radius: 50px;
-            border-top-left-radius: 50px;"></div>
-        <div>
-            <button class="save-btn" onclick="">ACTIVATE</button>
+        <div class="mt-4 p-4 p-md-0 row justify-content-center text-center">
+            <span class="d-block">Please Input License Key</span>
+            <div class="col-12">
+                <input type="text" class="d-block m-auto input-text-cls mt-2">
+            </div>
+            
+            <button class="d-block activate-btn mt-3" onclick="">ACTIVATE</button>
         </div>
     </div>
 </body>
 <style>
-    .activation-content {
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 20px;
-        text-align: center;
-    }
-    .activation-content button {
-        color: #FFFFFF;
-        margin:20px 0 20px 0;
-        height: 40px;
-        border-radius: 50px;
-        border-top-left-radius: 50px;
-        width: 50%;
-        text-align: center;
-    }
-    .activation-content div {
-        margin:20px 0 20px 0;
-    }
-    .content-pills:hover {
-        cursor: pointer;
-    }
-    .hint-font-size {
-        font-size: 8px;
+    .activation-logo {
+        height: 100px;
+        width: auto;
     }
     @media screen and (max-width: 768px) {
-        .hint-font-size {
-            font-size: 8px;
-        }
-    }
-    .side-menu-icon {
-        height: 100%;
-        width: 16px;
-    }
-
-    @media screen and (max-width: 768px) {
-        .side-menu-icon {
-            height: 100%;
-            width: 28px;
+        .activation-logo {
+            height: 52px;
+            width: auto;
         }
     }
 
-    .search-bar {
-        border-radius: 50px;
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-    }
-
-    .search-bar input {
-        flex: 1;
-        border: none;
-        outline: none;
-        border-radius: 50px;
-        height: 34px;
-    }
-
-    .search-bar input:focus {
-        box-shadow: none;
-        outline: none;
-    }
-
-    .search-bar button {
-        display: flex;
-        border: none;
-        background-color: white;
-        padding: 5px;
-        cursor: pointer;
-        border-top-right-radius: 50px;
-        border-bottom-right-radius: 50px;
-        justify-content: flex-start;
-        margin-right: 5px;
-    }
-
-    .save-btn {
-        width: 100%;
+    .activate-btn {
+        width: 45%;
         background-color: #616EEC;
         border-radius: 16px;
-    }
-
-    .label-size { font-size: 16px; }
-    .detail-size { font-size: 20px; }
-    .yes-btn { background: #11FFC6; }
-    .no-btn { background: #EA2A4C; }
-    .stack-top { z-index: 9; }
-    .content-body { position: relative; }
-
-    .popup-icon-close {
-        height: 28px;
-        width: 28px;
-    }
-
-    .open-popup {
-        visibility: visible !important;
-        top: 50% !important;
-        left: 50% !important;
-        transform: translate(-50%, -50%) scale(1) !important;
-    }
-
-    .popup-bg {
-        opacity: 0.6;
-        width: 100%;
-        position: absolute;
-        height: 100%;
-        background: black;
-    }
-
-    .popup {
-        border: 2px solid #7E7E7E;
-        border-radius: 16px;
-        margin: auto;
-        background-color: #333333;
         color: #FFFFFF;
-        height: auto;
-        max-width: 250px;
+        background-image: linear-gradient(180deg, #616EEC , #272727);
     }
-
-    .popup-container {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 50%;
-        left: 0;
-        visibility: hidden;
-        transform: translate(-50%, -50%) scale(0.1);
-        transition: transform 0.4s, top 0.4s;
-    }
-
-    .title-size { font-size: 12px; }
-    .value-size { font-size: 40px; }
-    .rate-size { font-size: 16px;}
-    .header-size { font-size: 20px; }
-
-    .side-menu-active-border {
-        border-top: 0px;
-        border-right: 1px;
-        border-bottom: 0px;
-        border-left: 0px;
-        border-style: solid;
-        border-color: #7E7E7E;
-    }
-
-    .icon {
-        height: 100%;
-        width: 28px;
-    }
-    @media screen and (max-width: 920px) {
-        .icon {
-            height: 100%;
-            width: 20px;
+    @media screen and (max-width: 768px) {
+        .activate-btn {
+            width: 70%;
         }
     }
 
-    .border-container { border: 1px solid #7E7E7E !important; }
-    .border-top { border-top: 1px solid #7E7E7E !important; }
-    .border-right { border-right: 1px solid #7E7E7E !important; }
-    .border-bottom { border-bottom: 1px solid #7E7E7E !important; }
-
-    .border-x {
+    .input-text-cls {
         border-top: 1px;
-        border-right: 0px;
-        border-bottom: 1px;
-        border-left: 0px;
-        border-style: solid;
-        border-color: #7E7E7E;
-    }
-
-    .row-active-border {
-        border-top: 0px;
         border-right: 1px;
         border-bottom: 1px;
-        border-left: 0px;
+        border-left: 1px;
         border-style: solid;
         border-color: #7E7E7E;
+        border-radius: 20px;
+        background-color: #0F0F0F;
+        color: #FFFFFF;
+        height: 36px;
+        width: 60%;
+        padding: 0px 12px;
+    }
+    @media screen and (max-width: 768px) {
+        .input-text-class {
+            height: 48px;
+            width: 90%;
+        }
     }
 
     .active-border {
@@ -207,32 +82,6 @@
         border-style: solid;
         border-color: #7E7E7E;
         border-radius: 3px;
-    }
-
-    .p-border-bot { margin-bottom: 0px !important; }
-    .body-container { margin: 40px auto auto auto }
-
-    .body-bg {
-    }
-
-    .side-menu-divider {
-        display: flex;
-        margin: auto;
-        width: 90%;
-        height: 1px;
-        background-color: #7E7E7E;
-    }
-
-    .side-menu {
-        background-color: blue;
-        height: 100%;
-        width: 10%;
-    }
-
-    .main-body {
-        background-color: green;
-        height: 100%;
-        width: auto;
     }
 
     body { 
