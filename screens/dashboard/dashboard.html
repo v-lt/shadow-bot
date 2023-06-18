@@ -19,7 +19,6 @@
         }
 
         .sidebar-tab.active {
-            font-weight: bold;
             color: #11FFC6;
         }
 
@@ -48,7 +47,7 @@
                                 <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
                                     alt="Shut down" onclick="showContent('dashboard-content')">
                             </div>
-                            <div class="d-none d-lg-flex p-3">
+                            <div class="d-none d-lg-flex p-3 content-pills">
                                 <a href="#" class="side-menu-font d-block mx-auto sidebar-tab active"
                                     onclick="showContent('dashboard-content')">DASHBOARD</a>
                             </div>
@@ -61,7 +60,7 @@
                                 <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
                                     alt="Shut down" onclick="showContent('profile-content')">
                             </div>
-                            <div class="d-none d-lg-flex p-3">
+                            <div class="d-none d-lg-flex p-3 content-pills">
                                 <a href="#" class="side-menu-font d-block mx-auto sidebar-tab"
                                     onclick="showContent('profile-content')">PROFILES</a>
                             </div>
@@ -74,7 +73,7 @@
                                 <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
                                     alt="Shut down" onclick="showContent('create-new-profile-content')">
                             </div>
-                            <div class="d-none d-lg-flex p-3">
+                            <div class="d-none d-lg-flex p-3 content-pills">
                                 <a href="#" class="side-menu-font d-block mx-auto text-center sidebar-tab"
                                     onclick="showContent('create-new-profile-content')">CREATE NEW PROFILE</a>
                             </div>
@@ -87,8 +86,9 @@
                                 <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
                                     alt="Shut down"></span>
                             </div>
-                            <div class="d-none d-lg-flex p-3">
-                                <a href="#" class="side-menu-font d-block mx-auto text-center sidebar-tab">RECOMMENDED PROFILES</a>
+                            <div class="d-none d-lg-flex p-3 content-pills">
+                                <a href="#" class="side-menu-font d-block mx-auto text-center sidebar-tab"
+                                onclick="showContent('recommended-profile-content')">RECOMMENDED PROFILES</a>
                             </div>
                         </div>
 
@@ -99,7 +99,7 @@
                                 <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
                                     alt="Shut down" onclick="showContent('settings-content')">
                             </div>
-                            <div class="d-none d-lg-flex p-3">
+                            <div class="d-none d-lg-flex p-3 content-pills">
                                 <a href="#" class="side-menu-font d-block mx-auto text-center sidebar-tab"
                                     onclick="showContent('settings-content')">ACCOUNT SETTINGS</a>
                             </div>
@@ -155,14 +155,14 @@
                                         alt="Notification"></span>
                             </div>
                             <div class="p-3 col-md-1 d-flex content-pills">
-                                <span class="m-auto"><img class="icon" src="../resources/shutdown-icon-white.png"
+                                <span class="m-auto"><img class="icon shutdown-icon" src="../resources/shutdown-icon-white.png"
                                         alt="Shut down"></span>
                             </div>
                         </div>
                     </div>
 
                     <div class="row border-top">
-                        <div class="p-3 col-10 col-lg-4  row-active-border">
+                        <div class="p-1 px-2 col-10 col-lg-4  row-active-border">
                             <div class="header-size color1">
                                 <span class="color1"> May 28, 2023</span>
                                 <span style="color: #FFFFFF;"> | </span>
@@ -171,7 +171,7 @@
                         </div>
                         <div class="p-2 d-none d-lg-block col-lg-6 row-active-border"></div>
                         <div class="p-2 d-none d-lg-block col-lg-1 row-active-border"></div>
-                        <div class="p-2 d-lg-flex d-lg-block col-2 col-lg-1 border-bottom d-flex content-pills">
+                        <div class="p-1 d-lg-flex d-lg-block col-2 col-lg-1 border-bottom d-flex content-pills">
                             <span class="m-auto">en</span>
                         </div>
                     </div>
@@ -258,10 +258,10 @@
                                     <div class="col-12 col-md-10 d-flex">
                                         <div class="d-none d-md-flex w-100">
                                             <div class="w-25 py-4 px-0 mx-2 text-center active-border"
-                                            style="border-radius: 16px;" onClick="showChangeStatusPopup()">
+                                            style="border-radius: 16px;" onClick="profileShowChangeStatusPopup(true)">
                                                 <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
                                                     alt="User">
-                                                <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
                                                 <span class="d-block status-size p-border-bot color1">ACTIVE</span>
                                             </div>
 
@@ -292,7 +292,7 @@
 
                                         <div class="d-block d-md-none col-12">
                                             <div class="mx-2 my-2 p-3 text-center active-border"
-                                            style="border-radius: 16px;" onClick="showChangeStatusPopup()">
+                                            style="border-radius: 16px;" onClick="profileShowChangeStatusPopup(true)">
                                                 <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
                                                     alt="User">
                                                 <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
@@ -335,7 +335,7 @@
                                     <div class="col-12 col-md-10 d-flex">
                                         <div class="d-none d-md-flex w-100">
                                             <div class="w-25 py-4 px-0 mx-2 text-center active-border"
-                                            style="border-radius: 16px;" onClick="showChangeStatusPopup()">
+                                            style="border-radius: 16px;" onClick="profileShowChangeStatusPopup(true)">
                                                 <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
                                                     alt="User">
                                                 <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
@@ -343,11 +343,11 @@
                                             </div>
 
                                             <div class="w-25 py-4 px-0 mx-2 text-center active-border"
-                                                style="border-radius: 16px;">
+                                                style="border-radius: 16px;" onClick="profileShowChangeStatusPopup()">
                                                 <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
                                                     alt="User">
                                                 <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
-                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                                <span class="d-block status-size p-border-bot color3">INACTIVE</span>
                                             </div>
 
                                             <div class="w-25 py-4 px-0 mx-2 text-center active-border"
@@ -369,7 +369,7 @@
 
                                         <div class="d-block d-md-none col-12">
                                             <div class="mx-2 my-2 p-3 text-center active-border"
-                                            style="border-radius: 16px;" onClick="showChangeStatusPopup()">
+                                            style="border-radius: 16px;">
                                                 <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
                                                     alt="User">
                                                 <span class="d-block status-size p-border-bot mt-4">Tree of Alpha 2</span>
@@ -411,23 +411,224 @@
                                 </div>
                             </div>
 
-                            <div class="popup-container d-flex" id="statusPopUp">
+                            <div class="popup-container d-flex" id="profile-popup">
                                 <div class="d-flex popup-bg"> </div>
                                 <div class="popup stack-top p-2 text-center">
                                     <div class="d-flex">
                                         <img class="ms-auto h-40 w-40 popup-icon-close"
                                             src="../resources/popup-close.png" alt="close"
-                                            onClick="hideChangeStatusPopup()">
+                                            onClick="profileHideChangeStatusPopup()">
                                     </div>
                                     <div class="p-2">
                                         <h3>Trading-News</h3>
-                                        <span>Do you want to activate this profile now?</span>
+                                        <span id="profile-popup-label">Do you want to activate this profile now?</span>
 
                                         <div class="d-flex justify-content-center mt-3">
                                             <button class="yes-btn px-4 py-1 me-3"
-                                                onclick="hideChangeStatusPopup()">YES</button>
+                                                onclick="profileHideChangeStatusPopup()">YES</button>
                                             <button class="no-btn px-4 py-1"
-                                                onclick="hideChangeStatusPopup()">NO</button>
+                                                onclick="profileHideChangeStatusPopup()">NO</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="recommended-profile-content" class="hidden content-div">
+                        <div class="content-body">
+                            <div class="d-block">
+                                <div class="row pt-4">                          
+                                    <div class="d-none d-md-block col-md-1"></div>
+                                    <div class="col-12 col-md-8">
+                                        <div class="row">
+                                            
+                                            <div class="d-flex d-md-none justify-content-md-left justify-content-center profiles-font">3 / 4 Profiles Active</div>
+                                            <div class="col-12 col-md-3 m-2 p-md-2 d-flex justify-content-left profiles-font color2">PROFILES</div>
+                                            <div class="col-12 col-md-4 m-2 p-md-2 d-flex justify-content-left profiles-font">RECOMMENDED PROFILES</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 d-none d-md-flex">
+                                        <div class="m-md-2 p-2 d-flex justify-content-left profiles-font">3 / 4 Profiles Active</div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-2">
+                                    <div class="d-none d-md-block col-md-1"></div>
+
+                                    <div class="col-12 col-md-10 d-flex">
+                                        <div class="d-none d-md-flex w-100">
+                                            <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                            style="border-radius: 16px;" onClick="recommendedShowChangeStatusPopup(true)">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                            </div>
+
+                                            <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                                style="border-radius: 16px;" onClick="recommendedShowChangeStatusPopup()">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color3">INACTIVE</span>
+                                            </div>
+
+                                            <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                                style="border-radius: 16px;">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                            </div>
+
+                                            <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                                style="border-radius: 16px;">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-block d-md-none col-12">
+                                            <div class="mx-2 my-2 p-3 text-center active-border"
+                                            style="border-radius: 16px;" onClick="recommendedShowChangeStatusPopup(true)">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                            </div>
+
+                                            <div class="mx-2 my-2 p-3 text-center active-border"
+                                                style="border-radius: 16px;">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                            </div>
+
+                                            <div class="mx-2 my-2 p-3 text-center active-border"
+                                                style="border-radius: 16px;">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                            </div>
+
+                                            <div class="mx-2 my-2 p-3 text-center active-border"
+                                                style="border-radius: 16px;">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="d-none d-md-block col-md-1"></div>
+                                </div>
+
+                                <div class="row mt-2">
+                                    <div class="d-none d-md-block col-md-1"></div>
+
+                                    <div class="col-12 col-md-10 d-flex">
+                                        <div class="d-none d-md-flex w-100">
+                                            <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                            style="border-radius: 16px;" onClick="recommendedShowChangeStatusPopup(true)">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                            </div>
+
+                                            <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                                style="border-radius: 16px;" onClick="recommendedShowChangeStatusPopup()">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color3">INACTIVE</span>
+                                            </div>
+
+                                            <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                                style="border-radius: 16px;">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                            </div>
+
+                                            <div class="w-25 py-4 px-0 mx-2 text-center active-border"
+                                                style="border-radius: 16px;">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-block d-md-none col-12">
+                                            <div class="mx-2 my-2 p-3 text-center active-border"
+                                            style="border-radius: 16px;" onClick="recommendedShowChangeStatusPopup(true)">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                            </div>
+
+                                            <div class="mx-2 my-2 p-3 text-center active-border"
+                                                style="border-radius: 16px;">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                            </div>
+
+                                            <div class="mx-2 my-2 p-3 text-center active-border"
+                                                style="border-radius: 16px;">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                            </div>
+
+                                            <div class="mx-2 my-2 p-3 text-center active-border"
+                                                style="border-radius: 16px;">
+                                                <img class="m-auto h-40 w-40" src="../resources/profile-placeholder.png"
+                                                    alt="User">
+                                                <span class="d-block status-size p-border-bot mt-4">Tree of alpha 3</span>
+                                                <span class="d-block status-size p-border-bot color1">ACTIVE</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="d-none d-md-block col-md-1"></div>
+                                </div>
+
+                                <div class="row">
+                                    <div style="height: 40px;"></div>
+                                </div>
+                            </div>
+
+                            <div class="popup-container d-flex" id="recommended-popup">
+                                <div class="d-flex popup-bg"> </div>
+                                <div class="popup stack-top p-2 text-center">
+                                    <div class="d-flex">
+                                        <img class="ms-auto h-40 w-40 popup-icon-close"
+                                            src="../resources/popup-close.png" alt="close"
+                                            onClick="recommendedHideChangeStatusPopup()">
+                                    </div>
+                                    <div class="p-2">
+                                        <h3>Trading-News</h3>
+                                        <span id="recommended-popup-label">Do you want to activate this profile now?</span>
+
+                                        <div class="d-flex justify-content-center mt-3">
+                                            <button class="yes-btn px-4 py-1 me-3"
+                                                onclick="recommendedHideChangeStatusPopup()">YES</button>
+                                            <button class="no-btn px-4 py-1"
+                                                onclick="recommendedHideChangeStatusPopup()">NO</button>
                                         </div>
                                     </div>
                                 </div>
@@ -470,10 +671,10 @@
                                         </div>
                                         <div class="d-none d-md-block col-1"></div>
                                         <div class="col-6 col-md-4">
-                                            <div class="active-border py-2 px-3 row1-size text-center content-pills"
+                                            <div class="active-border py-2 px-3 row1-size text-center content-pills"  
+                                            onclick="showContent('create-new-account-content')"
                                                 style="border-radius: 16px;">
-                                                <span 
-                                                onclick="showContent('create-new-account-content')">CREATE NEW ACCOUNT</span>
+                                                <span>CREATE NEW ACCOUNT</span>
                                             </div>
                                         </div>
                                     </div>
@@ -522,7 +723,7 @@
                                                     <span class="d-block">$100</span>
                                                 </div>
 
-                                                <div class="col-3 d-flex content-pills">
+                                                <div class="col-3 d-flex">
                                                     <span class="mt-auto me-auto"
                                                         style="color: #616EEC;">DONWLOAD</span>
                                                 </div>
@@ -546,7 +747,7 @@
                                 </div>
                             </div>
 
-                            <div class="popup-container d-flex" id="statusPopUp">
+                            <div class="popup-container d-flex" id="profile-popup">
                                 <div class="d-flex popup-bg"> </div>
                                 <div class="popup stack-top p-2 text-center">
                                     <div class="d-flex">
@@ -644,7 +845,7 @@
 
                         <div class="row px-5">
                             <div class="d-flex">
-                                <div class="active-border me-2" style="height: 25px; width: 25px;"></div>
+                                <input type="checkbox" class="active-border input-text-cls me-2" style="height: 25px; width: 25px;">
                                 <div class="d-flex">
                                     <span class="m-auto text-center">SHOW PASSWORD</span>
                                 </div>
@@ -722,8 +923,8 @@
 
                         <div class="row px-5">
                             <div class="d-flex">
-                                <div class="active-border me-2" style="height: 25px; width: 25px;"></div>
                                 <div class="d-flex">
+                                    <input type="checkbox" class="active-border input-text-cls me-2" style="height: 25px; width: 25px;">
                                     <span class="m-auto text-center">SHOW PASSWORD</span>
                                 </div>
                             </div>
@@ -889,7 +1090,7 @@
                         <div class="row px-md-5 mt-4">
                             <div class="d-none d-md-block col-4"></div>
                             <div class="col-6 col-md-4">
-                                <div class="active-border py-2 px-3 row1-size text-center content-pills" style="border-radius: 16px;">
+                                <div class="active-border py-2 px-3 row1-size text-center content-pills" style="border-radius: 16px;"  onClick="clearAllCreateProfileValue()">
                                     <span>BACK</span>
                                 </div>
                             </div>
@@ -908,6 +1109,19 @@
     </div>
 </body>
 <style>
+    input[type=checkbox]:checked::before {
+        background-color: #0F0F0F;
+    }
+    input[type=checkbox]:checked::after {
+        background-color: #0F0F0F;
+    }
+    
+    button { border: 0px;}
+    .shutdown-icon:hover {
+        filter: red(100%);
+        -webkit-filter: red(100%);
+    }
+
     .title-screen-size {
         font-size: 24px;
     }
@@ -924,7 +1138,13 @@
         width: 100%;
     }
     
+    .content-pills {
+        -webkit-transition: background 0.25 s; /* For Safari 3.0 to 6.0 */
+        transition: background 0.25s; /* For modern browsers */
+    }
+
     .content-pills:hover {
+        background-color: gray;
         cursor: pointer;
     }
     .hint-font-size {
@@ -979,6 +1199,7 @@
     }
 
     .save-btn {
+        padding: 4px;
         width: 100%;
         background-color: #616EEC;
         border-radius: 16px;
@@ -1124,13 +1345,36 @@
     }
 </style>
 <script>
-    let popup = document.getElementById("statusPopUp");
+    let profile_popup = document.getElementById("profile-popup");
+    let profile_popup_label = document.getElementById("profile-popup-label");
 
-    function showChangeStatusPopup() {
-        popup.classList.add("open-popup");
+    function profileShowChangeStatusPopup(isAccountActivated = false) {
+        if(isAccountActivated) {
+            //Should deactivate
+            profile_popup_label.textContent = "Do you want to deactivate this profile now?";
+        } else {
+            profile_popup_label.textContent = "Do you want to activate this profile now?";
+        }
+        profile_popup.classList.add("open-popup");
     }
-    function hideChangeStatusPopup() {
-        popup.classList.remove("open-popup");
+    function profileHideChangeStatusPopup() {
+        profile_popup.classList.remove("open-popup");
+    }
+
+    let recommended_popup = document.getElementById("recommended-popup");
+    let recommended_popup_label = document.getElementById("recommended-popup-label");
+
+    function recommendedShowChangeStatusPopup(isAccountActivated = false) {
+        if(isAccountActivated) {
+            //Should deactivate
+            recommended_popup_label.textContent = "Do you want to deactivate this profile now?";
+        } else {
+            recommended_popup_label.textContent = "Do you want to activate this profile now?";
+        }
+        recommended_popup.classList.add("open-popup");
+    }
+    function recommendedHideChangeStatusPopup() {
+        recommended_popup.classList.remove("open-popup");
     }
 
     function updateActiveTab() {
@@ -1153,6 +1397,26 @@
             } else {
                 divs[i].classList.add('hidden');
             }
+        }
+    }
+
+    function clearAllCreateProfileValue() {
+        var parent = document.getElementById("create-new-profile-content");
+        
+        var inputElements = parent.querySelectorAll("input, select, textarea");
+        for (i = 0; i < inputElements.length; i++) {
+            var child = inputElements[i];
+            child.value = '';
+        }
+    }
+
+    function clearAllUpdateProfileValue() {
+        var parent = document.getElementById("update-profile-content");
+        
+        var inputElements = parent.querySelectorAll("input, select, textarea");
+        for (i = 0; i < inputElements.length; i++) {
+            var child = inputElements[i];
+            child.value = '';
         }
     }
 
