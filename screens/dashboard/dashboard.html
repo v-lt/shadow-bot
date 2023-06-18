@@ -30,6 +30,11 @@
         .color1 { color: #11FFC6; }
         .color2 { color: #616EEC; }
         .color3 { color: #EA2A4C; }
+
+        .profile-tab-row a.active {
+            font-weight: bold;
+            color: #616EEC;
+        }
     </style>
 </head>
 
@@ -62,7 +67,8 @@
                             </div>
                             <div class="d-none d-lg-flex p-3 content-pills">
                                 <a href="#" class="side-menu-font d-block mx-auto sidebar-tab"
-                                    onclick="showContent('profile-content')">PROFILES</a>
+                                    onclick="showContent('profile-content'); 
+                                             switchProfileTab('profile-tab');">PROFILES</a>
                             </div>
                         </div>
 
@@ -84,11 +90,12 @@
                         <div>
                             <div class="d-xs d-lg-none d-flex">
                                 <img class="side-menu-icon m-auto" src="../resources/shutdown-icon-white.png"
-                                    alt="Shut down"></span>
+                                    alt="Shut down" onclick="showContent('profile-content')"></span>
                             </div>
                             <div class="d-none d-lg-flex p-3 content-pills">
                                 <a href="#" class="side-menu-font d-block mx-auto text-center sidebar-tab"
-                                onclick="showContent('recommended-profile-content')">RECOMMENDED PROFILES</a>
+                                    onclick="showContent('profile-content');
+                                             switchProfileTab('recommended-profile-tab');">RECOMMENDED PROFILES</a>
                             </div>
                         </div>
 
@@ -240,11 +247,12 @@
                                 <div class="row pt-4">                          
                                     <div class="d-none d-md-block col-md-1"></div>
                                     <div class="col-12 col-md-8">
-                                        <div class="row">
-                                            
+                                        <div class="row profile-tab-row">
                                             <div class="d-flex d-md-none justify-content-md-left justify-content-center profiles-font">3 / 4 Profiles Active</div>
-                                            <div class="col-12 col-md-3 m-2 p-md-2 d-flex justify-content-left profiles-font color2">PROFILES</div>
-                                            <div class="col-12 col-md-4 m-2 p-md-2 d-flex justify-content-left profiles-font">RECOMMENDED PROFILES</div>
+                                            <a href="#" id="profile-tab" class="col-12 col-md-3 m-2 p-md-2 d-flex justify-content-left profiles-font active"
+                                                onclick="switchProfileTab('profile-tab')">PROFILES</a>
+                                            <a href="#" id="recommended-profile-tab" class="col-12 col-md-4 m-2 p-md-2 d-flex justify-content-left profiles-font"
+                                                onclick="switchProfileTab('recommended-profile-tab')">RECOMMENDED PROFILES</a>
                                         </div>
                                     </div>
                                     <div class="col-md-3 d-none d-md-flex">
@@ -1417,6 +1425,28 @@
         for (i = 0; i < inputElements.length; i++) {
             var child = inputElements[i];
             child.value = '';
+        }
+    }
+
+    function removeActive(el) {
+        for (var i = 0; i < el.length; i++) {
+            el[i].classList.remove('active');
+        }
+    }
+
+    function switchProfileTab(id) {
+        var profileDivs = document.querySelectorAll('.profile-tab-row a');
+        var tabs = document.getElementsByClassName('sidebar-tab');
+
+        removeActive(profileDivs);
+        removeActive(tabs);
+        if (id == 'profile-tab'){
+            profileDivs[0].classList.add('active');
+            tabs[1].classList.add('active');
+        }
+        else if (id == 'recommended-profile-tab') {
+            profileDivs[1].classList.add('active');
+            tabs[3].classList.add('active');
         }
     }
 
