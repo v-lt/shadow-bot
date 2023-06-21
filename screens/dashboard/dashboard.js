@@ -95,4 +95,6 @@ function switchProfileTab(id) {
     }
 }
 
-updateActiveTab();
+document.addEventListener('DOMContentLoaded', function() {
+    updateActiveTab();
+}); 

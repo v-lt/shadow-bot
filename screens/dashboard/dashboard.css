@@ -59,6 +59,28 @@ button { border: 0px;}
     }
 }
 
+.hidden {
+    display: none;
+}
+
+.sidebar-tab.active {
+    color: #11FFC6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.color1 { color: #11FFC6; }
+.color2 { color: #616EEC; }
+.color3 { color: #EA2A4C; }
+
+.profile-tab-row a.active {
+    font-weight: bold;
+    color: #616EEC;
+}
+
 .search-bar {
     border-radius: 50px;
     border-top-left-radius: 50px;
