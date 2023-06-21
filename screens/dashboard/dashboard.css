@@ -9,9 +9,9 @@ input[type='checkbox'] {
 }
 
 button { border: 0px;}
+
 .shutdown-icon:hover {
-    filter: red(100%);
-    -webkit-filter: red(100%);
+    content: url("../resources/shutdown-icon-red.png");
 }
 
 .title-screen-size {
