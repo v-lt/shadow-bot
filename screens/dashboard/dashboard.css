@@ -36,7 +36,7 @@ button { border: 0px;}
 }
 
 .content-pills:hover {
-    background-color: gray;
+    background-color: #252525;
     cursor: pointer;
 }
 .hint-font-size {
@@ -64,6 +64,10 @@ button { border: 0px;}
 }
 
 .sidebar-tab.active {
+    color: #11FFC6;
+}
+
+.sidebar-tab:hover {
     color: #11FFC6;
 }
 
